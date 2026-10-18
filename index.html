@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>عمرو ناجي | Media Buyer & Performance Marketer</title>
+  <meta name="description" content="عمرو ناجي — Media Buyer وPerformance Marketer بخبرة في Meta Ads، WhatsApp Marketing، Growth، وتحليل رحلة العميل في السوق المصري والسعودي." />
+  <meta name="theme-color" content="#07111f" />
+  <meta property="og:title" content="عمرو ناجي | Media Buyer & Performance Marketer" />
+  <meta property="og:description" content="Portfolio شخصي لعمرو ناجي — Meta Ads، WhatsApp Growth، Funnels، Data & Landing Pages." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ar_EG" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#07111f;
+      --bg-2:#0b1728;
+      --card:#0f1e32;
+      --card-2:#11243b;
+      --text:#f5f8fc;
+      --muted:#aab7c8;
+      --line:rgba(255,255,255,.09);
+      --blue:#3b82f6;
+      --cyan:#22d3ee;
+      --green:#34d399;
+      --shadow:0 24px 80px rgba(0,0,0,.35);
+      --radius:24px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Cairo",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 12% 12%,rgba(59,130,246,.16),transparent 28%),
+        radial-gradient(circle at 88% 28%,rgba(34,211,238,.10),transparent 24%),
+        var(--bg);
+      line-height:1.75;
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .container{width:min(1160px,calc(100% - 36px));margin:auto}
+    .nav-wrap{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(18px);
+      background:rgba(7,17,31,.78);
+      border-bottom:1px solid var(--line)
+    }
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+    .brand-mark{
+      width:42px;height:42px;border-radius:14px;display:grid;place-items:center;
+      background:linear-gradient(135deg,var(--blue),var(--cyan));
+      color:white;font-weight:800;box-shadow:0 10px 30px rgba(59,130,246,.28)
+    }
+    .nav-links{display:flex;align-items:center;gap:24px;color:var(--muted);font-size:14px}
+    .nav-links a:hover{color:white}
+    .lang-btn{border:1px solid var(--line);background:rgba(255,255,255,.04);color:white;border-radius:12px;padding:8px 12px;cursor:pointer}
+    .hero{padding:88px 0 64px;position:relative}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:46px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 13px;border:1px solid rgba(52,211,153,.22);border-radius:999px;background:rgba(52,211,153,.08);color:#b8f4df;font-size:13px;font-weight:700;margin-bottom:18px}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 16px var(--green)}
+    h1{font-size:clamp(42px,6vw,72px);line-height:1.08;margin:0 0 14px;font-weight:800;letter-spacing:-1.6px}
+    .gradient-text{background:linear-gradient(90deg,#fff 8%,#82b7ff 56%,#5ee7f8);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero-role{font-size:clamp(20px,2.5vw,29px);font-weight:700;color:#cfe2ff;margin-bottom:18px}
+    .hero-copy{max-width:720px;color:var(--muted);font-size:18px;margin:0 0 28px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 18px;border-radius:14px;font-weight:800;border:1px solid var(--line);transition:.2s transform,.2s border-color,.2s background}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:linear-gradient(135deg,var(--blue),#2563eb);border-color:transparent;box-shadow:0 16px 40px rgba(37,99,235,.25)}
+    .btn-secondary{background:rgba(255,255,255,.04)}
+    .hero-card{position:relative;min-height:430px;border-radius:32px;padding:26px;background:linear-gradient(180deg,rgba(17,36,59,.96),rgba(10,23,40,.96));border:1px solid var(--line);box-shadow:var(--shadow);overflow:hidden}
+    .hero-card:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,.34),transparent 68%);top:-90px;left:-80px}
+    .profile-badge{width:120px;height:120px;border-radius:32px;display:grid;place-items:center;font-size:38px;font-weight:800;background:linear-gradient(145deg,#1d4ed8,#22d3ee);box-shadow:0 18px 55px rgba(34,211,238,.18);position:relative;margin-bottom:26px}
+    .mini-title{font-size:13px;color:var(--muted);margin-bottom:6px}
+    .mini-value{font-size:22px;font-weight:800;margin-bottom:18px}
+    .skill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .chip{font-size:12.5px;color:#d8e7fa;background:rgba(255,255,255,.055);border:1px solid var(--line);padding:7px 10px;border-radius:999px}
+    .market-note{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:13px}
+    .stats{padding:12px 0 74px}
+    .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .stat{padding:24px;border:1px solid var(--line);background:rgba(255,255,255,.035);border-radius:20px}
+    .stat strong{display:block;font-size:34px;line-height:1.1;margin-bottom:9px}
+    .stat span{color:var(--muted);font-size:14px}
+    section{padding:76px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:30px}
+    .section-head h2{font-size:clamp(30px,4vw,44px);margin:0;line-height:1.2}
+    .section-head p{max-width:600px;color:var(--muted);margin:0}
+    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .service-card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(17,36,59,.68),rgba(12,25,43,.68));padding:25px;border-radius:22px;min-height:235px;transition:.2s transform,.2s border-color}
+    .service-card:hover{transform:translateY(-4px);border-color:rgba(59,130,246,.35)}
+    .icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:rgba(59,130,246,.13);border:1px solid rgba(59,130,246,.20);font-weight:800;margin-bottom:20px;color:#93c5fd}
+    .service-card h3{margin:0 0 9px;font-size:19px}
+    .service-card p{margin:0;color:var(--muted);font-size:14px}
+    .experience-wrap{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .exp{padding:28px;border-radius:22px;border:1px solid var(--line);background:rgba(255,255,255,.03)}
+    .exp-top{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:10px}
+    .exp h3{margin:0;font-size:21px}
+    .exp .company{color:#8bc1ff;font-size:14px;font-weight:700}
+    .exp .market{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:5px 9px;border-radius:999px;white-space:nowrap}
+    .exp p{color:var(--muted);font-size:14px;margin:12px 0 0}
+    .results-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:stretch}
+    .case{padding:34px;border-radius:26px;background:linear-gradient(135deg,rgba(37,99,235,.18),rgba(34,211,238,.08));border:1px solid rgba(59,130,246,.24)}
+    .case-tag{font-size:12px;font-weight:800;color:#b7d5ff;margin-bottom:12px}
+    .case h3{font-size:28px;margin:0 0 12px}
+    .case p{color:var(--muted);margin:0 0 24px}
+    .case-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .case-metric{padding:17px;border-radius:16px;background:rgba(4,13,26,.45);border:1px solid var(--line)}
+    .case-metric strong{display:block;font-size:24px;margin-bottom:4px}
+    .case-metric span{color:var(--muted);font-size:12px}
+    .approach{padding:30px;border-radius:26px;border:1px solid var(--line);background:rgba(255,255,255,.03)}
+    .approach h3{margin:0 0 18px;font-size:22px}
+    .steps{display:grid;gap:12px}
+    .step{display:grid;grid-template-columns:38px 1fr;gap:12px;align-items:start}
+    .step-num{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:rgba(34,211,238,.08);color:#7de9f6;border:1px solid rgba(34,211,238,.18);font-weight:800}
+    .step strong{display:block;margin-top:2px}
+    .step span{color:var(--muted);font-size:13px}
+    .tools{display:flex;flex-wrap:wrap;gap:10px}
+    .tool{padding:11px 14px;border:1px solid var(--line);background:rgba(255,255,255,.035);border-radius:14px;color:#dbe9fb;font-size:14px}
+    .contact-box{padding:44px;border-radius:30px;background:linear-gradient(135deg,#172f52 0%,#0b1f38 48%,#0d3340 100%);border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:space-between;gap:30px;box-shadow:var(--shadow)}
+    .contact-box h2{font-size:clamp(30px,4vw,46px);margin:0 0 10px}
+    .contact-box p{margin:0;color:#c2d2e8;max-width:650px}
+    footer{padding:34px 0 42px;color:var(--muted);font-size:13px}
+    .footer-row{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:26px}
+    .reveal{opacity:0;transform:translateY(14px);transition:.55s ease}
+    .reveal.visible{opacity:1;transform:none}
+    @media(max-width:960px){
+      .hero-grid,.results-wrap{grid-template-columns:1fr}
+      .hero-card{min-height:0}
+      .services{grid-template-columns:repeat(2,1fr)}
+      .stat-grid{grid-template-columns:repeat(2,1fr)}
+      .experience-wrap{grid-template-columns:1fr}
+    }
+    @media(max-width:720px){
+      .nav-links a{display:none}
+      nav{height:64px}
+      .hero{padding:62px 0 44px}
+      .hero-copy{font-size:16px}
+      .services,.stat-grid,.case-metrics{grid-template-columns:1fr}
+      section{padding:58px 0}
+      .section-head{align-items:start;flex-direction:column}
+      .contact-box{padding:28px;align-items:flex-start;flex-direction:column}
+      .footer-row{flex-direction:column}
+      .exp-top{flex-direction:column}
+      .market-note{gap:12px;flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-wrap">
+    <div class="container">
+      <nav>
+        <a class="brand" href="#top" aria-label="Amr Nagi home">
+          <span class="brand-mark">AN</span>
+          <span data-i18n="brand">عمرو ناجي</span>
+        </a>
+        <div class="nav-links">
+          <a href="#expertise" data-i18n="navExpertise">خبراتي</a>
+          <a href="#experience" data-i18n="navExperience">الخبرة العملية</a>
+          <a href="#results" data-i18n="navResults">النتائج</a>
+          <a href="#contact" data-i18n="navContact">تواصل</a>
+          <button class="lang-btn" id="langToggle" type="button" aria-label="Switch language">EN</button>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <main id="top">
+    <header class="hero">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="eyebrow"><span class="dot"></span><span data-i18n="available">متاح لفرص Media Buying & Growth</span></div>
+          <h1><span data-i18n="hello">أنا عمرو ناجي</span><br><span class="gradient-text" data-i18n="heroTitle">أحوّل الـData لقرارات نمو.</span></h1>
+          <div class="hero-role">Media Buyer · Performance Marketing · Growth</div>
+          <p class="hero-copy" data-i18n="heroCopy">أدير وأحسّن حملات Meta Ads في السوق المصري والسعودي، وأربط الإعلانات برحلة العميل والـFunnel والبيانات — مع خلفية قوية في WhatsApp Marketing وLanding Pages.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://wa.me/201025168758" target="_blank" rel="noopener" data-i18n="ctaWhatsapp">تواصل معي على WhatsApp</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/amr-nagi1" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn btn-secondary" href="mailto:amrnagiramadan@gmail.com" data-i18n="ctaEmail">إرسال Email</a>
+          </div>
+        </div>
+
+        <aside class="hero-card reveal" aria-label="Profile snapshot">
+          <div class="profile-badge">AN</div>
+          <div class="mini-title" data-i18n="focusLabel">التركيز الأساسي</div>
+          <div class="mini-value">Performance Marketing & Growth</div>
+          <div class="mini-title" data-i18n="coreLabel">Core stack</div>
+          <div class="skill-row">
+            <span class="chip">Meta Ads</span><span class="chip">WhatsApp API</span><span class="chip">CLV</span><span class="chip">Funnels</span><span class="chip">A/B Testing</span><span class="chip">WordPress</span><span class="chip">Excel</span>
+          </div>
+          <div class="market-note">
+            <span data-i18n="markets">الأسواق: مصر · السعودية</span>
+            <span data-i18n="location">القاهرة، مصر</span>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <section class="stats">
+      <div class="container stat-grid reveal">
+        <div class="stat"><strong>130K+</strong><span data-i18n="stat1">Contact تم إدارتهم وتقسيمهم</span></div>
+        <div class="stat"><strong>10x</strong><span data-i18n="stat2">ROAS وصل له WhatsApp API</span></div>
+        <div class="stat"><strong>80%+</strong><span data-i18n="stat3">نمو في أداء WhatsApp Marketing</span></div>
+        <div class="stat"><strong>2</strong><span data-i18n="stat4">أسواق: مصر والسعودية</span></div>
+      </div>
+    </section>
+
+    <section id="expertise">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><h2 data-i18n="expertiseTitle">مش مجرد Ads Manager.</h2></div>
+          <p data-i18n="expertiseCopy">شغلي بيجمع بين Media Buying، التحليل، رحلة العميل، والـLanding Page عشان قرار التحسين يبقى مبني على الصورة كاملة مش رقم واحد داخل Ads Manager.</p>
+        </div>
+        <div class="services">
+          <article class="service-card reveal"><div class="icon">01</div><h3>Meta Ads</h3><p data-i18n="service1">Lead Generation، Conversion، Audience Testing، Creative Testing، Retargeting وDaily Optimization.</p></article>
+          <article class="service-card reveal"><div class="icon">02</div><h3>Growth & Funnels</h3><p data-i18n="service2">تحليل Customer Journey وSales Funnel وربط نتائج الإعلانات بالمراحل التالية لتحديد نقاط التسريب وفرص النمو.</p></article>
+          <article class="service-card reveal"><div class="icon">03</div><h3>WhatsApp Marketing</h3><p data-i18n="service3">Segmentation، CLV، Message Optimization، WhatsApp API، Nurturing وتحليل الأداء على قواعد بيانات كبيرة.</p></article>
+          <article class="service-card reveal"><div class="icon">04</div><h3>Web & Landing Pages</h3><p data-i18n="service4">WordPress وLanding Pages وخلفية Web Development تساعدني أفهم تأثير تجربة الموقع على الـConversion.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="experienceTitle">خبرة عملية</h2>
+          <p data-i18n="experienceCopy">خبرة مباشرة في حملات Performance، Growth Operations وWhatsApp Marketing عبر أكثر من نوع Business وفي السوقين المصري والسعودي.</p>
+        </div>
+        <div class="experience-wrap">
+          <article class="exp reveal"><div class="exp-top"><div><h3>Media Buyer</h3><div class="company">Demos</div></div><span class="market" data-i18n="saudi">السوق السعودي</span></div><p data-i18n="demosCopy">إدارة High-Spend Meta Ads Campaigns، Lead Generation وConversion، اختبار الجماهير والـCreatives، ومتابعة CPL، CPA، CTR، CVR وROAS.</p></article>
+          <article class="exp reveal"><div class="exp-top"><div><h3>Media Buyer</h3><div class="company">TechnoTeam Agency</div></div><span class="market">Full-Time · Egypt & Saudi</span></div><p data-i18n="technoCopy">إدارة حملات لعدة Clients، بناء Media Buying Strategy، Prospecting وRetargeting، تحليل الـCreatives وإعداد Recommendations لتحسين الأداء.</p></article>
+          <article class="exp reveal"><div class="exp-top"><div><h3>WhatsApp Marketing & Growth Manager</h3><div class="company" data-i18n="ekram">مؤسسة إكرام</div></div><span class="market">Mar 2026 — Present</span></div><p data-i18n="ekramCopy">إدارة +130K Contact، CLV-Based Segmentation، Customer Journey، WhatsApp API Optimization ودمج AI Agents في عمليات Sales وCustomer Support.</p></article>
+          <article class="exp reveal"><div class="exp-top"><div><h3>WhatsApp Marketing & Web Development</h3><div class="company">Freelance</div></div><span class="market">Remote</span></div><p data-i18n="freelanceCopy">WhatsApp Campaigns، WordPress، Landing Pages، وتطوير Responsive Websites باستخدام HTML، CSS، JavaScript وAngular.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="results">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 data-i18n="resultsTitle">نتائج أقدر أتكلم عنها بالأرقام</h2>
+          <p data-i18n="resultsCopy">أبرز الأرقام هنا مرتبطة بعمليات WhatsApp Marketing، بينما خبرة Meta Ads تشمل حملات ذات إنفاق مرتفع بدون نشر أرقام الـSpend.</p>
+        </div>
+        <div class="results-wrap">
+          <article class="case reveal">
+            <div class="case-tag">WHATSAPP GROWTH CASE</div>
+            <h3 data-i18n="caseTitle">تحويل قاعدة بيانات كبيرة لنظام Segmentation وGrowth قابل للقياس.</h3>
+            <p data-i18n="caseCopy">من خلال تقسيم الجمهور، CLV، تحسين الرسائل والمتابعة، وتحليل رحلة العميل بشكل مستمر.</p>
+            <div class="case-metrics">
+              <div class="case-metric"><strong>80%+</strong><span data-i18n="metricGrowth">Growth</span></div>
+              <div class="case-metric"><strong>10x</strong><span>ROAS</span></div>
+              <div class="case-metric"><strong>2.5%</strong><span>Conversion Rate</span></div>
+            </div>
+          </article>
+          <aside class="approach reveal">
+            <h3 data-i18n="approachTitle">طريقة شغلي</h3>
+            <div class="steps">
+              <div class="step"><div class="step-num">1</div><div><strong data-i18n="step1Title">Audit</strong><span data-i18n="step1Copy">أفهم الـBusiness، الـOffer، البيانات والـFunnel قبل أي قرار.</span></div></div>
+              <div class="step"><div class="step-num">2</div><div><strong data-i18n="step2Title">Strategy</strong><span data-i18n="step2Copy">أحدد الـObjective، Audience، Creative Angles والـKPIs.</span></div></div>
+              <div class="step"><div class="step-num">3</div><div><strong data-i18n="step3Title">Testing</strong><span data-i18n="step3Copy">اختبارات منظمة بدل تغيير كل حاجة في نفس الوقت.</span></div></div>
+              <div class="step"><div class="step-num">4</div><div><strong data-i18n="step4Title">Optimization</strong><span data-i18n="step4Copy">قرارات مبنية على Data وربط نتائج الإعلان بما بعد الإعلان.</span></div></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head reveal"><h2 data-i18n="toolsTitle">Skills & Tools</h2><p data-i18n="toolsCopy">الأدوات والمجالات اللي بستخدمها في الشغل اليومي والتحليل والتحسين.</p></div>
+        <div class="tools reveal">
+          <span class="tool">Meta Ads</span><span class="tool">Facebook & Instagram</span><span class="tool">Google Ads</span><span class="tool">Snapchat Ads</span><span class="tool">Audience Targeting</span><span class="tool">Retargeting</span><span class="tool">A/B Testing</span><span class="tool">Creative Testing</span><span class="tool">CLV Segmentation</span><span class="tool">ROAS Optimization</span><span class="tool">Excel</span><span class="tool">Customer Journey</span><span class="tool">Sales Funnels</span><span class="tool">WordPress</span><span class="tool">Landing Pages</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box reveal">
+          <div><h2 data-i18n="contactTitle">عندك Campaign أو Growth Challenge؟</h2><p data-i18n="contactCopy">لو محتاج حد يفكر في الـPerformance كجزء من الـBusiness مش مجرد Ads Manager، تقدر تتواصل معايا مباشرة.</p></div>
+          <div class="actions"><a class="btn btn-primary" href="https://wa.me/201025168758" target="_blank" rel="noopener">WhatsApp</a><a class="btn btn-secondary" href="mailto:amrnagiramadan@gmail.com">Email</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>© <span id="year"></span> Amr Nagi. All rights reserved.</span>
+      <span>Cairo, Egypt · <a href="https://github.com/AmrNagiRamadan" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/amr-nagi1" target="_blank" rel="noopener">LinkedIn</a></span>
+    </div>
+  </footer>
+
+<script>
+  const translations = {
+    en: {
+      brand:"Amr Nagi", navExpertise:"Expertise", navExperience:"Experience", navResults:"Results", navContact:"Contact",
+      available:"Open to Media Buying & Growth opportunities", hello:"I'm Amr Nagi", heroTitle:"I turn data into growth decisions.",
+      heroCopy:"I manage and optimize Meta Ads across Egypt and Saudi Arabia, connecting paid media with the customer journey, funnel and data — backed by strong WhatsApp Marketing and landing page experience.",
+      ctaWhatsapp:"Message me on WhatsApp", ctaEmail:"Send Email", focusLabel:"Primary focus", coreLabel:"Core stack", markets:"Markets: Egypt · Saudi Arabia", location:"Cairo, Egypt",
+      stat1:"Contacts managed & segmented", stat2:"ROAS achieved on WhatsApp API", stat3:"WhatsApp Marketing performance growth", stat4:"Markets: Egypt & Saudi Arabia",
+      expertiseTitle:"More than an Ads Manager.", expertiseCopy:"My work connects media buying, analytics, customer journeys and landing pages so optimization decisions are based on the full picture — not one metric inside Ads Manager.",
+      service1:"Lead Generation, Conversion, Audience Testing, Creative Testing, Retargeting and Daily Optimization.", service2:"Customer Journey and Sales Funnel analysis to connect ad performance with downstream conversion and growth opportunities.", service3:"Segmentation, CLV, message optimization, WhatsApp API, nurturing and performance analysis across large databases.", service4:"WordPress, landing pages and web development experience that helps me understand how UX affects conversion.",
+      experienceTitle:"Hands-on experience", experienceCopy:"Direct experience across performance campaigns, growth operations and WhatsApp marketing in both Egypt and Saudi Arabia.", saudi:"Saudi market",
+      demosCopy:"Managing high-spend Meta Ads campaigns, Lead Generation and Conversion, audience and creative testing, while tracking CPL, CPA, CTR, CVR and ROAS.",
+      technoCopy:"Managing campaigns for multiple clients, building media buying strategies, prospecting and retargeting, creative analysis and performance recommendations.", ekram:"Ekram Foundation", ekramCopy:"Managing 130K+ contacts, CLV-based segmentation, customer journeys, WhatsApp API optimization and AI Agents across sales and customer support workflows.",
+      freelanceCopy:"WhatsApp campaigns, WordPress, landing pages and responsive website development using HTML, CSS, JavaScript and Angular.",
+      resultsTitle:"Results I can talk about in numbers", resultsCopy:"The highlighted numbers come from WhatsApp Marketing operations, while my Meta Ads experience includes high-spend campaigns without publishing spend figures.",
+      caseTitle:"Turning a large database into a measurable segmentation and growth system.", caseCopy:"Using audience segmentation, CLV, message optimization, follow-up workflows and continuous customer journey analysis.", metricGrowth:"Growth",
+      approachTitle:"How I work", step1Title:"Audit", step1Copy:"Understand the business, offer, data and funnel before making decisions.", step2Title:"Strategy", step2Copy:"Define objectives, audiences, creative angles and KPIs.", step3Title:"Testing", step3Copy:"Structured tests instead of changing everything at once.", step4Title:"Optimization", step4Copy:"Data-led decisions that connect ad performance to what happens after the click.",
+      toolsTitle:"Skills & Tools", toolsCopy:"The tools and disciplines I use across daily execution, analysis and optimization.", contactTitle:"Have a campaign or growth challenge?", contactCopy:"If you need someone who looks at performance as part of the business — not just Ads Manager — let's talk."
+    }
+  };
+
+  const toggle = document.getElementById('langToggle');
+  let lang = 'ar';
+  toggle.addEventListener('click', () => {
+    lang = lang === 'ar' ? 'en' : 'ar';
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    toggle.textContent = lang === 'ar' ? 'EN' : 'AR';
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      if (!el.dataset.ar) el.dataset.ar = el.textContent;
+      const key = el.dataset.i18n;
+      el.textContent = lang === 'en' ? (translations.en[key] || el.textContent) : el.dataset.ar;
+    });
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, {threshold:.08});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
