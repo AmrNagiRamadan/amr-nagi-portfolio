@@ -5,190 +5,290 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>عمرو ناجي | Media Buying ومواقع WordPress</title>
 <meta name="description" content="عمرو ناجي — Media Buyer ومطوّر مواقع WordPress. حملات Meta Ads بتجيب عملاء، ومواقع وLanding Pages بتحوّل الزيارات لمبيعات. مصر والسعودية.">
+<meta name="theme-color" content="#030407">
 <meta property="og:title" content="عمرو ناجي | Media Buying ومواقع WordPress">
 <meta property="og:description" content="إعلانات بتجيب عملاء، ومواقع بتحوّلهم لمبيعات.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://amrnagiramadan.github.io/amr-nagi-portfolio/amr.jpg">
 <meta property="og:url" content="https://amrnagiramadan.github.io/amr-nagi-portfolio/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#ffffff; --soft:#f6f8f7; --line:#e7ece9; --ink:#0f1a15; --muted:#5b6b63;
-  --em:#059669; --em-dark:#047857; --em-soft:#e8f7f0; --em-glow:rgba(5,150,105,.18);
-  --radius:22px;
+  --bg:#030407; --bg2:#090b12; --card:#0d1019; --line:#1b2030; --ink:#f4f6fb; --muted:#9aa3b8;
+  --blue:#1558C9; --blue-l:#3b7bf0; --lime:#D4FF24;
+  --radius:24px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden}
+main{overflow-x:clip}
 body{font-family:'Cairo',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--lime);color:var(--bg)}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
-.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
-.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;border-radius:999px;padding:14px 28px;transition:.25s;cursor:pointer;border:0;font-family:inherit;font-size:16px}
-.btn-em{background:var(--em);color:#fff;box-shadow:0 10px 30px var(--em-glow)}
-.btn-em:hover{background:var(--em-dark);transform:translateY(-2px)}
-.btn-ghost{background:#fff;border:1.5px solid var(--line);color:var(--ink)}
-.btn-ghost:hover{border-color:var(--em);color:var(--em)}
-.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:6px 16px;font-size:14px;font-weight:600;background:#fff}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--em);box-shadow:0 0 0 4px var(--em-soft)}
-.eyebrow{color:var(--em);font-weight:700;font-size:14px;letter-spacing:.3px}
-h2.title{font-size:clamp(28px,4.5vw,46px);line-height:1.25;font-weight:900;margin:8px 0 14px}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+.num{font-family:'Space Grotesk','Cairo',sans-serif;direction:ltr;unicode-bidi:isolate}
+.lime{color:var(--lime)}
+.blue{color:var(--blue-l)}
+
+/* grain + cursor glow */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.glow{position:fixed;width:520px;height:520px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(21,88,201,.16),transparent 65%);transform:translate(-50%,-50%);left:-999px;top:-999px;transition:opacity .3s}
+
+/* buttons */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:800;border-radius:999px;padding:15px 30px;transition:transform .25s,box-shadow .25s,background .25s,color .25s;cursor:pointer;border:0;font-family:inherit;font-size:16px;overflow:hidden;isolation:isolate}
+.btn-lime{background:var(--lime);color:var(--bg);box-shadow:0 0 0 0 rgba(212,255,36,.5);animation:pulse 2.6s infinite}
+.btn-lime:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(212,255,36,.35)}
+.btn-lime::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.6) 50%,transparent 70%);transform:translateX(120%);animation:shine 3.5s infinite;z-index:-1}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid #2a3145}
+.btn-ghost:hover{border-color:var(--blue-l);color:#fff;background:rgba(21,88,201,.15)}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-l);transform:translateY(-3px)}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(212,255,36,.45)}70%{box-shadow:0 0 0 16px rgba(212,255,36,0)}100%{box-shadow:0 0 0 0 rgba(212,255,36,0)}}
+@keyframes shine{0%,60%{transform:translateX(120%)}100%{transform:translateX(-120%)}}
+
+.pill{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;padding:7px 16px;font-size:14px;font-weight:700;background:rgba(13,16,25,.7);backdrop-filter:blur(8px)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--lime);position:relative}
+.dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--lime);animation:ping 1.6s infinite}
+@keyframes ping{0%{transform:scale(.6);opacity:1}100%{transform:scale(1.8);opacity:0}}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--lime);font-weight:800;font-size:14px;letter-spacing:.4px}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--lime)}
+h2.title{font-size:clamp(30px,4.8vw,54px);line-height:1.2;font-weight:900;margin:10px 0 14px}
 .lead{color:var(--muted);font-size:clamp(16px,2vw,18px);max-width:640px}
-section{padding:96px 0}
+section{padding:110px 0;position:relative;z-index:1}
 
 /* header */
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.3s}
-header.scrolled{border-color:var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
-.logo{font-weight:900;font-size:22px;letter-spacing:-.3px}
-.logo span{color:var(--em)}
-.nav-links{display:flex;gap:30px;font-weight:600;color:var(--muted);font-size:15px}
-.nav-links a:hover{color:var(--em)}
-.nav .btn{padding:10px 20px;font-size:14px}
-.menu-btn{display:none;background:none;border:0;cursor:pointer;width:42px;height:42px}
-.menu-btn span{display:block;height:2px;background:var(--ink);margin:6px 8px;border-radius:2px}
+header{position:fixed;top:0;inset-inline:0;z-index:50;transition:.35s}
+header.scrolled{background:rgba(3,4,7,.75);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px;direction:ltr}
+.logo span{color:var(--lime)}
+.nav-links{display:flex;gap:30px;font-weight:700;color:var(--muted);font-size:15px}
+.nav-links a{position:relative}
+.nav-links a::after{content:"";position:absolute;bottom:-4px;right:0;width:0;height:2px;background:var(--lime);transition:.3s}
+.nav-links a:hover{color:#fff}.nav-links a:hover::after{width:100%}
+.nav .btn{padding:11px 22px;font-size:14px;animation:none}
+.menu-btn{display:none;background:none;border:0;cursor:pointer;width:44px;height:44px}
+.menu-btn span{display:block;height:2px;background:#fff;margin:6px 9px;border-radius:2px;transition:.3s}
 
 /* hero */
-.hero{padding:70px 0 40px;position:relative}
-.hero::before{content:"";position:absolute;inset:-200px 0 auto 0;height:600px;background:radial-gradient(600px 300px at 70% 30%,var(--em-soft),transparent 70%);z-index:-1}
-.hero h1{font-size:clamp(40px,8vw,88px);line-height:1.1;font-weight:900;margin:22px 0 18px;letter-spacing:-1px}
-.hero h1 .hl{position:relative;color:var(--em);white-space:nowrap}
-.hero h1 .hl::after{content:"";position:absolute;inset:auto 0 6px 0;height:10px;background:var(--em-soft);z-index:-1;border-radius:4px}
-.hero .lead{font-size:clamp(17px,2.2vw,20px);max-width:700px}
-.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0 26px}
-.proof{display:flex;gap:28px;flex-wrap:wrap;color:var(--muted);font-weight:600;font-size:15px}
-.proof b{color:var(--ink);font-weight:800}
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 60px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:-1;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55}
+.b1{width:520px;height:520px;background:var(--blue);top:-120px;left:-120px;animation:float1 14s ease-in-out infinite}
+.b2{width:340px;height:340px;background:var(--lime);opacity:.13;bottom:-80px;right:20%;animation:float2 16s ease-in-out infinite}
+@keyframes float1{50%{transform:translate(120px,80px) scale(1.1)}}
+@keyframes float2{50%{transform:translate(-100px,-60px) scale(1.15)}}
+.grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(42px,7.4vw,96px);line-height:1.08;font-weight:900;margin:24px 0 20px;letter-spacing:-1px}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.08em}
+.hero h1 .line>span{display:inline-block;transform:translateY(110%);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards}
+.hero h1 .line:nth-child(2)>span{animation-delay:.15s}
+@keyframes up{to{transform:none}}
+.hl{color:var(--lime);position:relative;white-space:nowrap}
+.hl svg{position:absolute;inset:auto 0 -10px 0;width:100%;height:20px;overflow:visible}
+.hl path{fill:none;stroke:var(--blue-l);stroke-width:5;stroke-linecap:round;stroke-dasharray:400;stroke-dashoffset:400;animation:draw 1s .9s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.typer{color:var(--ink);font-weight:800;border-left:3px solid var(--lime);padding-left:4px;animation:blink 1s step-end infinite}
+@keyframes blink{50%{border-color:transparent}}
+.hero .lead{font-size:clamp(17px,2.1vw,20px);max-width:640px}
+.fade{opacity:0;transform:translateY(18px);animation:fadeUp .8s forwards}
+@keyframes fadeUp{to{opacity:1;transform:none}}
+.d1{animation-delay:.35s}.d2{animation-delay:.5s}.d3{animation-delay:.65s}.d4{animation-delay:.8s}.d5{animation-delay:.4s}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin:32px 0 30px}
+.proof{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.faces{display:flex}
+.faces i{width:38px;height:38px;border-radius:50%;border:2px solid var(--bg);margin-inline-start:-10px;display:grid;place-items:center;font-style:normal;font-weight:800;font-size:13px}
+.faces i:first-child{margin:0}
+.proof small{color:var(--muted);font-weight:600;font-size:14px;line-height:1.4}
+.proof small b{color:#fff}
+.stars{color:var(--lime);letter-spacing:2px}
 
-.showcase{margin-top:48px;border-radius:32px;overflow:hidden;position:relative;background:linear-gradient(135deg,#ecfdf5 0%,#d1fae5 45%,#f0fdf4 100%);min-height:440px;display:grid;grid-template-columns:1fr 1fr;align-items:end;border:1px solid var(--line)}
-.showcase .photo{align-self:end;justify-self:center;height:100%;display:flex;align-items:flex-end}
-.showcase .photo img{max-height:440px;object-fit:contain}
-.avatar{width:260px;height:260px;border-radius:50%;margin:60px auto;background:linear-gradient(135deg,var(--em),#34d399);display:grid;place-items:center;color:#fff;font-size:88px;font-weight:900;box-shadow:0 30px 60px var(--em-glow)}
-.show-txt{padding:48px}
-.show-txt h3{font-size:clamp(22px,3vw,32px);font-weight:900;line-height:1.3;margin-bottom:22px}
-.mini-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.mini{background:rgba(255,255,255,.8);border:1px solid #fff;border-radius:18px;padding:16px}
-.mini b{display:block;font-size:30px;font-weight:900;color:var(--em-dark);line-height:1.2}
-.mini span{font-size:13px;color:var(--muted);font-weight:600}
+.portrait{position:relative;justify-self:center;width:min(440px,100%)}
+.portrait .frame{position:relative;border-radius:36px 36px 200px 200px;overflow:hidden;aspect-ratio:4/5.4;background:linear-gradient(180deg,#0b1a3a,#030407);border:1px solid #1d2a4a;box-shadow:0 40px 120px rgba(21,88,201,.35)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:center 15%;transform:scale(1.08);animation:zoomIn 1.6s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes zoomIn{to{transform:scale(1)}}
+.portrait .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(3,4,7,.85))}
+.ring{position:absolute;inset:-22px;border-radius:50%;border:1.5px dashed rgba(212,255,36,.35);animation:spin 30s linear infinite;z-index:-1;top:10%;bottom:auto;aspect-ratio:1}
+@keyframes spin{to{transform:rotate(360deg)}}
+.chip{position:absolute;background:rgba(13,16,25,.85);backdrop-filter:blur(12px);border:1px solid #263050;border-radius:18px;padding:12px 16px;display:flex;gap:10px;align-items:center;box-shadow:0 20px 50px rgba(0,0,0,.5);animation:bob 5s ease-in-out infinite;z-index:2}
+.chip b{font-family:'Space Grotesk',sans-serif;font-size:22px;line-height:1;display:block;direction:ltr}
+.chip span{font-size:12px;color:var(--muted);font-weight:700}
+.chip .ic{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;flex:none}
+.chip.c1{top:12%;right:-34px}.chip.c1 .ic{background:var(--lime);color:var(--bg)}
+.chip.c2{top:48%;left:-44px;animation-delay:-1.6s}.chip.c2 .ic{background:var(--blue);color:#fff}
+.chip.c3{bottom:9%;right:-20px;animation-delay:-3.2s}.chip.c3 .ic{background:#fff;color:var(--bg)}
+@keyframes bob{50%{transform:translateY(-12px)}}
+.name-tag{position:absolute;bottom:26px;inset-inline:0;text-align:center;z-index:2}
+.name-tag b{font-size:24px;font-weight:900;display:block}
+.name-tag span{color:var(--lime);font-weight:700;font-size:14px}
+
+/* marquee */
+.marquee{border-block:1px solid var(--line);background:var(--lime);color:var(--bg);overflow:hidden;padding:18px 0;transform:rotate(-1.5deg);margin:10px -20px 0;position:relative;z-index:2}
+.marquee.alt{background:var(--blue);color:#fff;transform:rotate(1.5deg);margin-top:-48px;z-index:1}
+.track{display:flex;gap:44px;width:max-content;animation:scroll 32s linear infinite;font-weight:900;font-size:clamp(18px,2.4vw,26px);white-space:nowrap}
+.marquee.alt .track{animation-direction:reverse}
+.track span{display:flex;align-items:center;gap:44px}
+.track span::after{content:"✦";font-size:.8em}
+@keyframes scroll{to{transform:translateX(50%)}}
 
 /* trusted */
-.trusted{padding:44px 0;border-block:1px solid var(--line);background:var(--soft)}
-.trusted p{text-align:center;color:var(--muted);font-weight:700;font-size:14px;margin-bottom:18px}
-.logos{display:flex;justify-content:center;gap:clamp(24px,6vw,72px);flex-wrap:wrap;font-weight:900;font-size:clamp(18px,2.5vw,24px);color:#9aa8a1}
-.logos span{transition:.3s}.logos span:hover{color:var(--em)}
+.trusted{padding:70px 0 20px}
+.trusted p{text-align:center;color:var(--muted);font-weight:700;font-size:14px;margin-bottom:22px}
+.logos{display:flex;justify-content:center;gap:clamp(26px,6vw,80px);flex-wrap:wrap;font-weight:900;font-size:clamp(18px,2.6vw,26px);color:#4a5370}
+.logos span{transition:.3s}.logos span:hover{color:#fff}
+
+/* problem */
+.pain{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.pain div{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.pain .x{width:40px;height:40px;border-radius:12px;background:rgba(255,80,80,.12);color:#ff6b6b;display:grid;place-items:center;font-weight:900;margin-bottom:14px}
+.pain h4{font-size:19px;font-weight:800;margin-bottom:6px}
+.pain p{color:var(--muted);font-size:15px}
 
 /* offers */
-.offers{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:44px}
-.offer{border:1px solid var(--line);border-radius:28px;padding:36px;background:#fff;display:flex;flex-direction:column;transition:.3s;position:relative}
-.offer:hover{border-color:var(--em);box-shadow:0 24px 60px rgba(15,26,21,.07);transform:translateY(-4px)}
-.offer.feat{background:var(--ink);color:#fff;border-color:var(--ink)}
-.offer.feat .muted,.offer.feat li{color:#c9d4cf}
-.tag{position:absolute;top:24px;left:24px;background:var(--em);color:#fff;font-size:12px;font-weight:800;padding:4px 12px;border-radius:999px}
-.ico{width:56px;height:56px;border-radius:16px;background:var(--em-soft);display:grid;place-items:center;margin-bottom:22px}
-.offer.feat .ico{background:rgba(52,211,153,.15)}
-.ico svg{width:28px;height:28px;stroke:var(--em);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.offer.feat .ico svg{stroke:#34d399}
-.offer h3{font-size:26px;font-weight:900;margin-bottom:6px}
-.muted{color:var(--muted)}
-.offer ul{list-style:none;margin:22px 0 30px;display:grid;gap:12px;flex:1}
-.offer li{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-weight:500}
-.offer li::before{content:"✓";flex:none;width:22px;height:22px;border-radius:50%;background:var(--em-soft);color:var(--em);font-weight:900;font-size:12px;display:grid;place-items:center;margin-top:3px}
-.offer.feat li::before{background:rgba(52,211,153,.18);color:#34d399}
-.offer .btn{justify-content:center}
-.offer.feat .btn-ghost{background:transparent;color:#fff;border-color:#3a4a42}
-
-/* combo */
-.combo{margin-top:22px;border-radius:28px;padding:30px 36px;background:var(--em-soft);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.combo h4{font-size:22px;font-weight:900}
-.combo p{color:var(--muted)}
+.offers{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:48px}
+.offer{position:relative;border-radius:30px;padding:38px;background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .4s,border-color .4s;transform-style:preserve-3d;overflow:hidden}
+.offer::before{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(21,88,201,.35),transparent 70%);top:var(--my,-150px);left:var(--mx,-150px);transform:translate(-50%,-50%);opacity:0;transition:opacity .3s;pointer-events:none}
+.offer:hover::before{opacity:1}
+.offer:hover{border-color:#2c3a66}
+.offer.feat{background:linear-gradient(160deg,#0f2a63 0%,#0b1430 55%,var(--card) 100%);border-color:#24407e}
+.tag{position:absolute;top:26px;left:26px;background:var(--lime);color:var(--bg);font-size:12px;font-weight:900;padding:5px 14px;border-radius:999px}
+.ico{width:58px;height:58px;border-radius:18px;background:rgba(212,255,36,.1);display:grid;place-items:center;margin-bottom:22px;border:1px solid rgba(212,255,36,.25)}
+.ico svg{width:28px;height:28px;stroke:var(--lime);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.offer h3{font-size:28px;font-weight:900;margin-bottom:6px;position:relative}
+.offer .muted{color:var(--muted);position:relative}
+.offer ul{list-style:none;margin:24px 0 32px;display:grid;gap:13px;flex:1;position:relative}
+.offer li{display:flex;gap:12px;align-items:flex-start;color:#cfd5e4;font-weight:600}
+.offer li::before{content:"✓";flex:none;width:22px;height:22px;border-radius:50%;background:var(--lime);color:var(--bg);font-weight:900;font-size:12px;display:grid;place-items:center;margin-top:3px}
+.combo{margin-top:22px;border-radius:30px;padding:32px 38px;background:var(--lime);color:var(--bg);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;position:relative;overflow:hidden}
+.combo h4{font-size:24px;font-weight:900}
+.combo p{font-weight:600;opacity:.8}
+.combo .btn{background:var(--bg);color:var(--lime)}
+.combo .btn:hover{transform:translateY(-3px)}
 
 /* results */
-.results{background:var(--soft)}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
-.stat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 24px}
-.stat b{display:block;font-size:clamp(36px,5vw,52px);font-weight:900;color:var(--em);line-height:1.1}
-.stat span{color:var(--muted);font-weight:600;font-size:15px}
-.case{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:28px;padding:40px;display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center}
-.case h3{font-size:clamp(22px,3vw,30px);font-weight:900;line-height:1.35;margin:10px 0}
-.case-list{display:grid;gap:12px}
-.case-list div{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-radius:14px;background:var(--soft);font-weight:700}
-.case-list div b{color:var(--em);font-size:20px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:48px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 26px;position:relative;overflow:hidden}
+.stat::after{content:"";position:absolute;bottom:0;right:0;height:3px;width:0;background:linear-gradient(90deg,var(--lime),var(--blue));transition:width 1.4s .2s}
+.stat.in::after{width:100%}
+.stat b{display:block;font-family:'Space Grotesk',sans-serif;font-size:clamp(40px,5vw,58px);font-weight:700;color:var(--lime);line-height:1.1;direction:ltr;text-align:right}
+.stat span{color:var(--muted);font-weight:700;font-size:15px}
+.case{margin-top:22px;border-radius:30px;padding:44px;display:grid;grid-template-columns:1.2fr 1fr;gap:34px;align-items:center;background:linear-gradient(135deg,var(--blue),#0c3a8f);position:relative;overflow:hidden}
+.case::before{content:"";position:absolute;width:400px;height:400px;border-radius:50%;border:60px solid rgba(255,255,255,.06);top:-180px;left:-120px}
+.case .eyebrow{color:var(--lime)}
+.case h3{font-size:clamp(24px,3vw,34px);font-weight:900;line-height:1.35;margin:12px 0;position:relative}
+.case p{color:#d6e2ff;position:relative}
+.bars{display:grid;gap:16px;position:relative}
+.bar{background:rgba(3,4,7,.35);border-radius:16px;padding:14px 18px}
+.bar div{display:flex;justify-content:space-between;font-weight:800;margin-bottom:8px}
+.bar div b{color:var(--lime);font-family:'Space Grotesk',sans-serif;direction:ltr}
+.bar i{display:block;height:8px;border-radius:9px;background:rgba(255,255,255,.12);overflow:hidden}
+.bar i::after{content:"";display:block;height:100%;width:0;background:var(--lime);border-radius:9px;transition:width 1.6s cubic-bezier(.2,.8,.2,1)}
+.case.in .bar i::after{width:var(--w)}
 
-/* services grid */
-.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
-.svc div{border:1px solid var(--line);border-radius:18px;padding:22px;font-weight:700;transition:.25s;background:#fff}
-.svc div:hover{border-color:var(--em);color:var(--em)}
-.svc small{display:block;color:var(--muted);font-weight:500;font-size:14px;margin-top:4px}
+/* services */
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:48px}
+.svc div{border:1px solid var(--line);border-radius:20px;padding:24px;font-weight:800;transition:.3s;background:var(--card)}
+.svc div:hover{border-color:var(--lime);transform:translateY(-6px);box-shadow:0 18px 40px rgba(212,255,36,.08)}
+.svc small{display:block;color:var(--muted);font-weight:600;font-size:14px;margin-top:4px}
 
 /* process */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px;counter-reset:s}
-.step{padding:28px;border-radius:var(--radius);border:1px solid var(--line);position:relative}
-.step::before{counter-increment:s;content:"0" counter(s);font-weight:900;font-size:40px;color:var(--em-soft);-webkit-text-stroke:1.5px var(--em);display:block;line-height:1;margin-bottom:14px}
-.step h4{font-size:20px;font-weight:800;margin-bottom:6px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:48px;position:relative}
+.steps::before{content:"";position:absolute;top:34px;right:6%;left:6%;height:2px;background:repeating-linear-gradient(90deg,#2a3145 0 8px,transparent 8px 16px)}
+.step{position:relative;padding:0 6px}
+.step .n{width:68px;height:68px;border-radius:50%;background:var(--bg);border:2px solid var(--blue);display:grid;place-items:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px;color:var(--lime);margin-bottom:20px;position:relative;transition:.4s}
+.step:hover .n{background:var(--lime);color:var(--bg);border-color:var(--lime);transform:scale(1.08)}
+.step h4{font-size:21px;font-weight:900;margin-bottom:6px}
 .step p{color:var(--muted);font-size:15px}
 
 /* about */
-.about{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.about-card{border-radius:32px;background:linear-gradient(160deg,var(--em-soft),#fff);border:1px solid var(--line);padding:40px}
-.exp{display:grid;gap:14px}
-.exp div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 20px}
-.exp b{display:block;font-weight:800}
-.exp span{color:var(--muted);font-size:14px}
-.checks{list-style:none;display:grid;gap:12px;margin:24px 0 30px}
-.checks li{display:flex;gap:10px;font-weight:600}
-.checks li::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;background:var(--em);margin-top:10px}
+.about{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center}
+.about-img{position:relative;border-radius:32px;overflow:hidden;border:1px solid var(--line)}
+.about-img img{width:100%;aspect-ratio:4/4.6;object-fit:cover;object-position:center 20%;filter:grayscale(.2)}
+.about-img .badge{position:absolute;bottom:20px;right:20px;left:20px;background:rgba(3,4,7,.75);backdrop-filter:blur(10px);border:1px solid #263050;border-radius:18px;padding:16px 20px;display:flex;justify-content:space-around;text-align:center}
+.about-img .badge b{display:block;font-family:'Space Grotesk',sans-serif;color:var(--lime);font-size:24px;direction:ltr}
+.about-img .badge span{font-size:12px;color:var(--muted);font-weight:700}
+.checks{list-style:none;display:grid;gap:12px;margin:24px 0}
+.checks li{display:flex;gap:12px;font-weight:700}
+.checks li::before{content:"→";color:var(--lime);font-weight:900}
+.exp{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:26px 0 32px}
+.exp div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 18px;transition:.3s}
+.exp div:hover{border-color:var(--blue-l)}
+.exp b{display:block;font-weight:800;font-size:15px}
+.exp span{color:var(--muted);font-size:13px}
 
 /* faq */
-.faq{max-width:820px;margin:44px auto 0;display:grid;gap:12px}
-details{border:1px solid var(--line);border-radius:18px;padding:20px 24px;background:#fff;transition:.25s}
-details[open]{border-color:var(--em);box-shadow:0 12px 30px rgba(15,26,21,.05)}
-summary{font-weight:800;font-size:17px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq{max-width:840px;margin:48px auto 0;display:grid;gap:12px}
+details{border:1px solid var(--line);border-radius:20px;padding:22px 26px;background:var(--card);transition:.3s}
+details[open]{border-color:var(--blue-l);background:#0d1430}
+summary{font-weight:800;font-size:17px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--em);font-size:24px;line-height:1;transition:.25s}
-details[open] summary::after{transform:rotate(45deg)}
-details p{color:var(--muted);margin-top:10px}
+summary::after{content:"+";flex:none;width:30px;height:30px;border-radius:50%;background:rgba(212,255,36,.12);color:var(--lime);display:grid;place-items:center;font-size:20px;transition:.3s}
+details[open] summary::after{transform:rotate(45deg);background:var(--lime);color:var(--bg)}
+details p{color:var(--muted);margin-top:12px}
 
-/* final cta */
-.final{padding:0 0 96px}
-.final-box{border-radius:36px;background:var(--ink);color:#fff;padding:clamp(40px,7vw,80px);text-align:center;position:relative;overflow:hidden}
-.final-box::before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(var(--em),transparent 70%);opacity:.35;top:-250px;right:-150px}
-.final-box h2{font-size:clamp(28px,5vw,52px);font-weight:900;line-height:1.25;position:relative}
-.final-box p{color:#b7c4be;max-width:600px;margin:16px auto 32px;position:relative;font-size:18px}
+/* final */
+.final{padding:20px 0 110px}
+.final-box{border-radius:40px;background:var(--lime);color:var(--bg);padding:clamp(44px,7vw,90px);text-align:center;position:relative;overflow:hidden}
+.final-box::before,.final-box::after{content:"";position:absolute;border-radius:50%;border:2px solid rgba(3,4,7,.12);animation:spin 40s linear infinite}
+.final-box::before{width:520px;height:520px;top:-260px;right:-160px;border-style:dashed}
+.final-box::after{width:380px;height:380px;bottom:-220px;left:-100px}
+.final-box h2{font-size:clamp(32px,5.6vw,64px);font-weight:900;line-height:1.15;position:relative}
+.final-box p{max-width:600px;margin:18px auto 34px;position:relative;font-size:19px;font-weight:600;opacity:.8}
 .final-box .hero-cta{justify-content:center;margin:0;position:relative}
-.final-box .btn-ghost{background:transparent;color:#fff;border-color:#3a4a42}
+.final-box .btn-dark{background:var(--bg);color:var(--lime)}
+.final-box .btn-dark:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(3,4,7,.35)}
+.final-box .btn-ghost{color:var(--bg);border-color:rgba(3,4,7,.3)}
+.final-box .btn-ghost:hover{background:var(--bg);color:#fff}
 
-footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:14px}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:14px;position:relative;z-index:1}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-footer a:hover{color:var(--em)}
+footer a:hover{color:var(--lime)}
 
-.wa-float{position:fixed;bottom:22px;left:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 30px rgba(37,211,102,.4);transition:.25s}
+.wa-float{position:fixed;bottom:22px;left:22px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 30px rgba(37,211,102,.4);transition:.25s}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:ping 2s infinite}
 .wa-float:hover{transform:scale(1.08)}
 .wa-float svg{width:30px;height:30px;fill:#fff}
+.progress{position:fixed;top:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--lime));z-index:70;width:0}
 
-.stat b,.mini b,.case-list b,.proof b{direction:ltr;unicode-bidi:isolate}
-.reveal{opacity:0;transform:translateY(24px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
+.stagger>*{opacity:0;transform:translateY(30px);transition:opacity .6s,transform .6s}
+.stagger.in>*{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.08s}.stagger.in>*:nth-child(3){transition-delay:.16s}.stagger.in>*:nth-child(4){transition-delay:.24s}
+.stagger.in>*:nth-child(5){transition-delay:.32s}.stagger.in>*:nth-child(6){transition-delay:.4s}.stagger.in>*:nth-child(7){transition-delay:.48s}.stagger.in>*:nth-child(8){transition-delay:.56s}
 
-@media (max-width:960px){
-  .offers,.about,.case,.showcase{grid-template-columns:1fr}
-  .stats,.steps,.svc{grid-template-columns:repeat(2,1fr)}
-  .show-txt{padding:32px 24px 0}
-  .showcase{min-height:auto}
-  .nav-links{display:none;position:absolute;top:74px;inset-inline:0;background:#fff;flex-direction:column;padding:20px 24px;gap:16px;border-bottom:1px solid var(--line)}
+@media (max-width:980px){
+  .hero-grid,.offers,.about,.case{grid-template-columns:1fr}
+  .hero{min-height:auto;padding-top:110px}
+  .portrait{width:min(360px,86%);margin-top:20px}
+  .stats,.svc,.pain{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr);row-gap:36px}
+  .steps::before{display:none}
+  .nav-links{display:none;position:absolute;top:78px;inset-inline:0;background:rgba(3,4,7,.97);flex-direction:column;padding:22px 24px;gap:18px;border-bottom:1px solid var(--line)}
   .nav-links.open{display:flex}
   .menu-btn{display:block}
   .nav .btn{display:none}
+  .about-img{max-width:440px}
 }
 @media (max-width:560px){
-  section{padding:72px 0}
-  .stats,.steps,.svc{grid-template-columns:1fr}
-  .offer,.case,.about-card{padding:26px}
-  .hero-cta .btn{width:100%;justify-content:center}
-  .avatar{width:200px;height:200px;font-size:68px;margin:40px auto}
+  section{padding:80px 0}
+  .stats,.svc,.pain,.steps,.exp{grid-template-columns:1fr}
+  .offer,.case{padding:28px}
+  .hero-cta .btn{width:100%}
+  .chip{transform:scale(.85)}
+  .chip.c1{right:-12px}.chip.c2{left:-16px}.chip.c3{right:-6px}
+  .chip b{font-size:18px}
+  .marquee{margin-inline:-10px}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important}.reveal{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal,.stagger>*,.fade,.hero h1 .line>span{opacity:1;transform:none}.hl path{stroke-dashoffset:0}}
 </style>
 </head>
 <body id="top">
+<div class="progress" id="progress"></div>
+<div class="glow" id="glow"></div>
 
 <header id="hdr">
   <div class="wrap nav">
@@ -200,7 +300,7 @@ footer a:hover{color:var(--em)}
       <a href="#about">مين أنا</a>
       <a href="#faq">أسئلة شائعة</a>
     </nav>
-    <a class="btn btn-em" href="https://wa.me/201025168758?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%B9%D9%85%D8%B1%D9%88%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B9%D8%B1%D9%81%20%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84%20%D8%A3%D9%83%D8%AA%D8%B1" target="_blank" rel="noopener">احجز استشارة مجانية</a>
+    <a class="btn btn-lime" href="https://wa.me/201025168758?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%B9%D9%85%D8%B1%D9%88%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9" target="_blank" rel="noopener">احجز استشارة مجانية</a>
     <button class="menu-btn" id="menuBtn" aria-label="القائمة"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -208,56 +308,72 @@ footer a:hover{color:var(--em)}
 <main>
 <!-- HERO -->
 <section class="hero">
-  <div class="wrap">
-    <span class="pill"><span class="dot"></span>متاح لمشاريع جديدة — مصر والسعودية</span>
-    <h1>إعلانات بتبيع.<br>ومواقع <span class="hl">بتحوّل.</span></h1>
-    <p class="lead">بدير حملات Meta Ads اللي بتجيبلك عملاء حقيقيين، وببني مواقع WordPress وLanding Pages بتحوّل الزيارة دي لمبيعات. كل ده مبني على Data مش تخمين.</p>
-    <div class="hero-cta">
-      <a class="btn btn-em" href="#offers">شوف الباقات ←</a>
-      <a class="btn btn-ghost" href="https://wa.me/201025168758" target="_blank" rel="noopener">كلمني واتساب</a>
-    </div>
-    <div class="proof">
-      <span><b>+130K</b> عميل تم إدارتهم</span>
-      <span><b>10x</b> ROAS</span>
-      <span><b>+80%</b> نمو</span>
+  <div class="hero-bg"><div class="grid-bg"></div><div class="blob b1"></div><div class="blob b2"></div></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill fade"><span class="dot"></span>متاح لمشاريع جديدة — مصر والسعودية</span>
+      <h1>
+        <span class="line"><span>إعلانات بتبيع.</span></span>
+        <span class="line"><span>ومواقع <span class="hl">بتحوّل.<svg viewBox="0 0 200 20" preserveAspectRatio="none"><path d="M3 14 Q 60 2 110 10 T 197 6"/></svg></span></span></span>
+      </h1>
+      <p class="lead fade d1">بساعد البيزنس يجيب عملاء أكتر بتكلفة أقل — <span class="typer" id="typer">حملات Meta Ads</span></p>
+      <div class="hero-cta fade d2">
+        <a class="btn btn-lime" href="#offers">عايز أزوّد مبيعاتي ←</a>
+        <a class="btn btn-ghost" href="https://wa.me/201025168758" target="_blank" rel="noopener">كلمني واتساب</a>
+      </div>
+      <div class="proof fade d3">
+        <div class="faces"><i style="background:var(--lime);color:var(--bg)">T</i><i style="background:var(--blue)">D</i><i style="background:#fff;color:var(--bg)">إ</i><i style="background:#1b2030">+</i></div>
+        <small><span class="stars">★★★★★</span><br>شغل حقيقي مع <b>شركات ووكالات</b> في مصر والسعودية</small>
+      </div>
     </div>
 
-    <div class="showcase reveal">
-      <div class="show-txt">
-        <span class="eyebrow">Media Buyer · WordPress Developer</span>
-        <h3>مش مجرد حد بيشغّل إعلانات — أنا بشوف الرحلة كاملة من الإعلان لحد ما الفلوس تدخل.</h3>
-        <div class="mini-stats">
-          <div class="mini"><b>10x</b><span>ROAS في حملات WhatsApp API</span></div>
-          <div class="mini"><b>2.5%</b><span>Conversion Rate</span></div>
-          <div class="mini"><b>+60%</b><span>Open Rate</span></div>
-          <div class="mini"><b>2</b><span>أسواق: مصر والسعودية</span></div>
-        </div>
+    <div class="portrait fade d5" id="portrait">
+      <div class="ring"></div>
+      <div class="frame">
+        <img src="amr.jpg" alt="عمرو ناجي — Media Buyer" fetchpriority="high">
+        <div class="name-tag"><b>عمرو ناجي</b><span>Media Buyer · WordPress Developer</span></div>
       </div>
-      <div class="photo">
-        <!-- ضع صورتك باسم amr.png في نفس الفولدر وهتظهر تلقائياً -->
-        <img src="amr.png" alt="عمرو ناجي" onerror="this.outerHTML='<div class=avatar>ع</div>'">
-      </div>
+      <div class="chip c1"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div><div><b>10x</b><span>ROAS</span></div></div>
+      <div class="chip c2"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-7 7-7s7 3 7 7"/><path d="M17 11a3 3 0 100-6M22 21c0-3-2-5-4-6"/></svg></div><div><b>130K+</b><span>عميل</span></div></div>
+      <div class="chip c3"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div><b>+80%</b><span>نمو</span></div></div>
     </div>
   </div>
 </section>
+
+<!-- MARQUEE -->
+<div class="marquee"><div class="track" id="t1"><span>Meta Ads</span><span>Lead Generation</span><span>WordPress</span><span>Landing Pages</span><span>WhatsApp Marketing</span><span>ROAS</span><span>Creative Testing</span><span>WooCommerce</span><span>Retargeting</span></div></div>
+<div class="marquee alt"><div class="track" id="t2"><span>إعلانات بتبيع</span><span>مواقع بتحوّل</span><span>قرارات بالـData</span><span>عملاء أكتر</span><span>تكلفة أقل</span><span>نمو حقيقي</span></div></div>
 
 <!-- TRUSTED -->
 <div class="trusted">
   <div class="wrap">
     <p>اشتغلت مع</p>
-    <div class="logos"><span>TechnoTeam</span><span>Demos</span><span>مؤسسة إكرام</span><span>Freelance Clients</span></div>
+    <div class="logos stagger"><span>TechnoTeam</span><span>Demos</span><span>مؤسسة إكرام</span><span>Freelance Clients</span></div>
   </div>
 </div>
 
-<!-- OFFERS -->
-<section id="offers">
+<!-- PAIN -->
+<section>
   <div class="wrap">
-    <span class="eyebrow">الخدمات</span>
-    <h2 class="title">اختار اللي بيزوّد مبيعاتك.</h2>
-    <p class="lead">خدمتين مكمّلين لبعض: إعلانات بتجيب الناس الصح، وموقع بيقنعهم يشتروا.</p>
+    <span class="eyebrow reveal">المشكلة</span>
+    <h2 class="title reveal">بتصرف على الإعلانات… <span class="blue">والمبيعات مش جاية؟</span></h2>
+    <div class="pain stagger">
+      <div><div class="x">✕</div><h4>تكلفة الليد عالية</h4><p>بتدفع كتير على كل عميل محتمل، ونص الليدز مش مهتمين أصلاً.</p></div>
+      <div><div class="x">✕</div><h4>الموقع مش بيقنع</h4><p>الزيارات بتيجي وتمشي، لأن الصفحة مش معمولة عشان تبيع.</p></div>
+      <div><div class="x">✕</div><h4>قرارات بالتخمين</h4><p>مفيش تتبّع واضح، فمش عارف أنهي إعلان بيجيب فلوس فعلاً.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFERS -->
+<section id="offers" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow reveal">الحل</span>
+    <h2 class="title reveal">خدمتين… <span class="lime">بيكمّلوا بعض.</span></h2>
+    <p class="lead reveal">إعلانات بتجيب الناس الصح، وموقع بيقنعهم يشتروا.</p>
 
     <div class="offers">
-      <div class="offer feat reveal">
+      <div class="offer feat reveal tilt">
         <span class="tag">الأكثر طلباً</span>
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-6"/><path d="M15 8h5v5"/></svg></div>
         <h3>Media Buying</h3>
@@ -271,10 +387,10 @@ footer a:hover{color:var(--em)}
           <li>تحسين يومي لـCPL وCPA وROAS</li>
           <li>تقرير أداء دوري بتوصيات واضحة</li>
         </ul>
-        <a class="btn btn-em" href="https://wa.me/201025168758?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B9%D8%B1%D9%81%20%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A7%D9%84%D9%80Media%20Buying" target="_blank" rel="noopener">ابدأ حملتك ←</a>
+        <a class="btn btn-lime" href="https://wa.me/201025168758?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B9%D8%B1%D9%81%20%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A7%D9%84%D9%80Media%20Buying" target="_blank" rel="noopener">ابدأ حملتك ←</a>
       </div>
 
-      <div class="offer reveal">
+      <div class="offer reveal tilt">
         <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/><path d="M8 21h8"/><path d="M12 18v3"/></svg></div>
         <h3>مواقع WordPress</h3>
         <p class="muted">موقع أو Landing Page سريعة ومتظبطة عشان تبيع، مش بس شكلها حلو.</p>
@@ -287,62 +403,61 @@ footer a:hover{color:var(--em)}
           <li>سرعة تحميل وSEO أساسي</li>
           <li>تسليم وتدريب على إدارة الموقع</li>
         </ul>
-        <a class="btn btn-ghost" href="https://wa.me/201025168758?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B9%D9%85%D9%84%20%D9%85%D9%88%D9%82%D8%B9%20WordPress" target="_blank" rel="noopener">اطلب موقعك ←</a>
+        <a class="btn btn-blue" href="https://wa.me/201025168758?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B9%D9%85%D9%84%20%D9%85%D9%88%D9%82%D8%B9%20WordPress" target="_blank" rel="noopener">اطلب موقعك ←</a>
       </div>
     </div>
 
     <div class="combo reveal">
       <div>
-        <h4>باقة متكاملة: موقع + إعلانات</h4>
-        <p>أبني لك Landing Page وأشغّل عليها الحملات — كل حاجة متربطة ومتتبّعة من أول يوم.</p>
+        <h4>🔥 الباقة المتكاملة: موقع + إعلانات</h4>
+        <p>أبنيلك Landing Page وأشغّل عليها الحملات — كل حاجة متربطة ومتتبّعة من أول يوم.</p>
       </div>
-      <a class="btn btn-em" href="https://wa.me/201025168758?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D9%85%D8%AA%D9%83%D8%A7%D9%85%D9%84%D8%A9%20(%D9%85%D9%88%D9%82%D8%B9%20%2B%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86%D8%A7%D8%AA)" target="_blank" rel="noopener">اطلب عرض سعر</a>
+      <a class="btn" href="https://wa.me/201025168758?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D9%85%D8%AA%D9%83%D8%A7%D9%85%D9%84%D8%A9%20(%D9%85%D9%88%D9%82%D8%B9%20%2B%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86%D8%A7%D8%AA)" target="_blank" rel="noopener">اطلب عرض سعر ←</a>
     </div>
   </div>
 </section>
 
 <!-- RESULTS -->
-<section class="results" id="results">
+<section id="results" style="background:var(--bg2)">
   <div class="wrap">
-    <span class="eyebrow">النتائج</span>
-    <h2 class="title">أرقام حقيقية. نمو حقيقي.</h2>
-    <p class="lead">بعض النتائج اللي حققتها في WhatsApp Marketing والحملات المدفوعة.</p>
-    <div class="stats">
-      <div class="stat reveal"><b>+80%</b><span>نمو في أداء WhatsApp Marketing</span></div>
-      <div class="stat reveal"><b>10x</b><span>ROAS في حملات WhatsApp API</span></div>
-      <div class="stat reveal"><b>130K+</b><span>عميل بـSegmentation يومي على CLV</span></div>
-      <div class="stat reveal"><b>+60%</b><span>Open Rate بعد تحسين الرسائل</span></div>
+    <span class="eyebrow reveal">النتائج</span>
+    <h2 class="title reveal">أرقام حقيقية. <span class="lime">نمو حقيقي.</span></h2>
+    <div class="stats stagger" id="stats">
+      <div class="stat"><b><span class="count" data-to="80" data-pre="+" data-suf="%">0</span></b><span>نمو في أداء WhatsApp Marketing</span></div>
+      <div class="stat"><b><span class="count" data-to="10" data-suf="x">0</span></b><span>ROAS في حملات WhatsApp API</span></div>
+      <div class="stat"><b><span class="count" data-to="130" data-suf="K+">0</span></b><span>عميل بـSegmentation يومي</span></div>
+      <div class="stat"><b><span class="count" data-to="60" data-pre="+" data-suf="%">0</span></b><span>Open Rate بعد تحسين الرسائل</span></div>
     </div>
-    <div class="case reveal">
+    <div class="case reveal" id="case">
       <div>
         <span class="eyebrow">Case Study — مؤسسة إكرام</span>
         <h3>قاعدة بيانات 130 ألف عميل اتحوّلت لنظام نمو قابل للقياس.</h3>
-        <p class="muted">تقسيم الجمهور على أساس CLV والسلوك، تحسين الرسائل والمتابعة، تصميم Customer Journey كاملة، ودمج AI Agents في المبيعات وخدمة العملاء.</p>
+        <p>تقسيم الجمهور على أساس CLV والسلوك، تحسين الرسائل والمتابعة، تصميم Customer Journey كاملة، ودمج AI Agents في المبيعات وخدمة العملاء.</p>
       </div>
-      <div class="case-list">
-        <div><span>Growth</span><b>+80%</b></div>
-        <div><span>ROAS</span><b>10x</b></div>
-        <div><span>Conversion Rate</span><b>2.5%</b></div>
-        <div><span>Open Rate</span><b>+60%</b></div>
+      <div class="bars">
+        <div class="bar"><div><span>Growth</span><b>+80%</b></div><i style="--w:80%"></i></div>
+        <div class="bar"><div><span>ROAS</span><b>10x</b></div><i style="--w:100%"></i></div>
+        <div class="bar"><div><span>Open Rate</span><b>+60%</b></div><i style="--w:60%"></i></div>
+        <div class="bar"><div><span>Conversion Rate</span><b>2.5%</b></div><i style="--w:35%"></i></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHAT I DO -->
+<!-- SERVICES -->
 <section>
   <div class="wrap">
-    <span class="eyebrow">كل اللي تحتاجه</span>
-    <h2 class="title">التسويق والموقع، مع شخص واحد.</h2>
-    <div class="svc">
-      <div class="reveal">Meta Ads<small>Facebook & Instagram</small></div>
-      <div class="reveal">Snapchat & Google Ads<small>توسيع القنوات</small></div>
-      <div class="reveal">Lead Generation<small>ليدز بجودة أعلى</small></div>
-      <div class="reveal">Creative Testing<small>أفضل Angles وAd Copies</small></div>
-      <div class="reveal">WhatsApp Marketing<small>Segmentation وAPI</small></div>
-      <div class="reveal">WordPress<small>مواقع ومتاجر</small></div>
-      <div class="reveal">Landing Pages<small>صفحات بتحوّل</small></div>
-      <div class="reveal">Analytics & Reports<small>CPL · CPA · ROAS</small></div>
+    <span class="eyebrow reveal">كل اللي تحتاجه</span>
+    <h2 class="title reveal">التسويق والموقع، <span class="blue">مع شخص واحد.</span></h2>
+    <div class="svc stagger">
+      <div>Meta Ads<small>Facebook & Instagram</small></div>
+      <div>Snapchat & Google Ads<small>توسيع القنوات</small></div>
+      <div>Lead Generation<small>ليدز بجودة أعلى</small></div>
+      <div>Creative Testing<small>أفضل Angles وAd Copies</small></div>
+      <div>WhatsApp Marketing<small>Segmentation وAPI</small></div>
+      <div>WordPress<small>مواقع ومتاجر</small></div>
+      <div>Landing Pages<small>صفحات بتحوّل</small></div>
+      <div>Analytics & Reports<small>CPL · CPA · ROAS</small></div>
     </div>
   </div>
 </section>
@@ -350,38 +465,39 @@ footer a:hover{color:var(--em)}
 <!-- PROCESS -->
 <section id="process" style="padding-top:0">
   <div class="wrap">
-    <span class="eyebrow">طريقة الشغل</span>
-    <h2 class="title">4 خطوات من أول مكالمة لحد النتايج.</h2>
-    <div class="steps">
-      <div class="step reveal"><h4>Audit</h4><p>أفهم البيزنس والعرض والبيانات والـFunnel قبل أي قرار.</p></div>
-      <div class="step reveal"><h4>Strategy</h4><p>أحدد الهدف والجمهور والـCreative Angles والـKPIs.</p></div>
-      <div class="step reveal"><h4>Build & Launch</h4><p>أجهّز الموقع أو الـLanding Page وأطلق الحملات بتتبّع كامل.</p></div>
-      <div class="step reveal"><h4>Optimize</h4><p>اختبارات منظمة وتحسين يومي مبني على الأرقام.</p></div>
+    <span class="eyebrow reveal">طريقة الشغل</span>
+    <h2 class="title reveal">4 خطوات من أول مكالمة <span class="lime">لحد النتايج.</span></h2>
+    <div class="steps stagger">
+      <div class="step"><div class="n">01</div><h4>Audit</h4><p>أفهم البيزنس والعرض والبيانات والـFunnel قبل أي قرار.</p></div>
+      <div class="step"><div class="n">02</div><h4>Strategy</h4><p>أحدد الهدف والجمهور والـCreative Angles والـKPIs.</p></div>
+      <div class="step"><div class="n">03</div><h4>Build & Launch</h4><p>أجهّز الموقع أو الـLanding Page وأطلق الحملات بتتبّع كامل.</p></div>
+      <div class="step"><div class="n">04</div><h4>Optimize</h4><p>اختبارات منظمة وتحسين يومي مبني على الأرقام.</p></div>
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" style="background:var(--soft)">
+<section id="about" style="background:var(--bg2)">
   <div class="wrap about">
+    <div class="about-img reveal">
+      <img src="amr.jpg" alt="عمرو ناجي" loading="lazy">
+      <div class="badge"><div><b>2</b><span>أسواق</span></div><div><b>4+</b><span>جهات عمل</span></div><div><b>10x</b><span>ROAS</span></div></div>
+    </div>
     <div class="reveal">
       <span class="eyebrow">مين أنا</span>
-      <h2 class="title">أكتر من Media Buyer. شريك في النمو.</h2>
+      <h2 class="title">أكتر من Media Buyer. <span class="lime">شريك في النمو.</span></h2>
       <p class="lead">أنا عمرو ناجي، Media Buyer ومتخصص Performance Marketing. بدير حملات Meta Ads بإنفاق مرتفع في السوقين المصري والسعودي، وعندي خلفية Web Development بتخليني أفهم إزاي تجربة الموقع بتأثر على الـConversion.</p>
       <ul class="checks">
-        <li>خبرة في السوق المصري والسعودي</li>
         <li>بربط الإعلان بكل اللي بعده: الموقع، الواتساب، والمبيعات</li>
         <li>قرارات مبنية على Data مش على رقم واحد في Ads Manager</li>
       </ul>
-      <a class="btn btn-em" href="https://wa.me/201025168758" target="_blank" rel="noopener">يلا نتكلم ←</a>
-    </div>
-    <div class="about-card reveal">
       <div class="exp">
-        <div><b>Media Buyer — TechnoTeam Agency</b><span>حملات لعدة عملاء · مصر والسعودية</span></div>
-        <div><b>Media Buyer — Demos</b><span>حملات High-Spend للسوق السعودي</span></div>
-        <div><b>WhatsApp Marketing & Growth Manager — مؤسسة إكرام</b><span>مارس 2026 — حتى الآن</span></div>
-        <div><b>WhatsApp Marketing & Web Development — Freelance</b><span>WordPress · Landing Pages · HTML/CSS/JS</span></div>
+        <div><b>TechnoTeam Agency</b><span>Media Buyer · مصر والسعودية</span></div>
+        <div><b>Demos</b><span>Media Buyer · السوق السعودي</span></div>
+        <div><b>مؤسسة إكرام</b><span>WhatsApp Marketing & Growth</span></div>
+        <div><b>Freelance</b><span>WordPress · Landing Pages</span></div>
       </div>
+      <a class="btn btn-lime" href="https://wa.me/201025168758" target="_blank" rel="noopener">يلا نتكلم ←</a>
     </div>
   </div>
 </section>
@@ -390,15 +506,15 @@ footer a:hover{color:var(--em)}
 <section id="faq">
   <div class="wrap">
     <div style="text-align:center">
-      <span class="eyebrow">أسئلة شائعة</span>
-      <h2 class="title">حاجات كويس تعرفها.</h2>
+      <span class="eyebrow reveal">أسئلة شائعة</span>
+      <h2 class="title reveal">حاجات كويس تعرفها.</h2>
     </div>
-    <div class="faq">
-      <details class="reveal"><summary>أقل ميزانية إعلانات أبدأ بيها كام؟</summary><p>بتفرق حسب المجال والسوق والهدف. في الاستشارة المجانية بنحدد ميزانية واقعية تديك Data كفاية تبني عليها قرارات.</p></details>
-      <details class="reveal"><summary>هشوف نتايج إمتى؟</summary><p>أول أسبوعين بيكونوا مرحلة Testing لجمع البيانات، وبعدها بنبدأ نركّز الميزانية على اللي شغال ونحسّن التكلفة.</p></details>
-      <details class="reveal"><summary>الموقع بياخد وقت قد إيه؟</summary><p>الـLanding Page غالباً في أيام قليلة، والموقع الكامل أو المتجر حسب عدد الصفحات والمنتجات. بنتفق على جدول واضح قبل ما نبدأ.</p></details>
-      <details class="reveal"><summary>هل بتشتغل مع عملاء في السعودية؟</summary><p>أيوه، عندي خبرة مباشرة في حملات السوق السعودي، وبشتغل Remote مع عملاء في مصر والسعودية.</p></details>
-      <details class="reveal"><summary>هعرف أتابع الأداء إزاي؟</summary><p>هتوصلك تقارير دورية فيها الأرقام المهمة (CPL، CPA، ROAS) والتوصيات الجاية، ولو عندك موقع هيكون التتبّع متظبط عليه.</p></details>
+    <div class="faq stagger">
+      <details><summary>أقل ميزانية إعلانات أبدأ بيها كام؟</summary><p>بتفرق حسب المجال والسوق والهدف. في الاستشارة المجانية بنحدد ميزانية واقعية تديك Data كفاية تبني عليها قرارات.</p></details>
+      <details><summary>هشوف نتايج إمتى؟</summary><p>أول أسبوعين بيكونوا مرحلة Testing لجمع البيانات، وبعدها بنبدأ نركّز الميزانية على اللي شغال ونحسّن التكلفة.</p></details>
+      <details><summary>الموقع بياخد وقت قد إيه؟</summary><p>الـLanding Page غالباً في أيام قليلة، والموقع الكامل أو المتجر حسب عدد الصفحات والمنتجات. بنتفق على جدول واضح قبل ما نبدأ.</p></details>
+      <details><summary>هل بتشتغل مع عملاء في السعودية؟</summary><p>أيوه، عندي خبرة مباشرة في حملات السوق السعودي، وبشتغل Remote مع عملاء في مصر والسعودية.</p></details>
+      <details><summary>هعرف أتابع الأداء إزاي؟</summary><p>هتوصلك تقارير دورية فيها الأرقام المهمة (CPL، CPA، ROAS) والتوصيات الجاية، ولو عندك موقع هيكون التتبّع متظبط عليه.</p></details>
     </div>
   </div>
 </section>
@@ -410,7 +526,7 @@ footer a:hover{color:var(--em)}
       <h2>مش عارف تبدأ منين؟<br>قولي عايز توصل لفين.</h2>
       <p>استشارة مجانية 15 دقيقة نفهم فيها البيزنس بتاعك ونحدد أسرع طريق لزيادة المبيعات.</p>
       <div class="hero-cta">
-        <a class="btn btn-em" href="https://wa.me/201025168758?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9" target="_blank" rel="noopener">احجز الاستشارة على واتساب</a>
+        <a class="btn btn-dark" href="https://wa.me/201025168758?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9" target="_blank" rel="noopener">احجز الاستشارة على واتساب ←</a>
         <a class="btn btn-ghost" href="mailto:amrnagiramadan@gmail.com">ابعت Email</a>
       </div>
     </div>
@@ -426,18 +542,60 @@ footer a:hover{color:var(--em)}
 </footer>
 
 <a class="wa-float" href="https://wa.me/201025168758" target="_blank" rel="noopener" aria-label="واتساب">
-  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zM20.5 3.5C18.2 1.2 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.5-8.4z"/></svg>
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.200.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.200 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zM20.5 3.5C18.2 1.2 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.5-8.4z"/></svg>
 </a>
 
 <script>
+(function(){
 document.getElementById('yr').textContent=new Date().getFullYear();
-const hdr=document.getElementById('hdr');
-addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>10),{passive:true});
-const nav=document.getElementById('nav');
-document.getElementById('menuBtn').onclick=()=>nav.classList.toggle('open');
-nav.querySelectorAll('a').forEach(a=>a.onclick=()=>nav.classList.remove('open'));
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// header + progress
+var hdr=document.getElementById('hdr'),prog=document.getElementById('progress');
+function onScroll(){hdr.classList.toggle('scrolled',scrollY>10);var h=document.documentElement.scrollHeight-innerHeight;prog.style.width=(h>0?scrollY/h*100:0)+'%';}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+// mobile menu
+var nav=document.getElementById('nav');
+document.getElementById('menuBtn').onclick=function(){nav.classList.toggle('open')};
+nav.querySelectorAll('a').forEach(function(a){a.onclick=function(){nav.classList.remove('open')}});
+
+// duplicate marquee tracks for seamless loop
+['t1','t2'].forEach(function(id){var t=document.getElementById(id);t.innerHTML+=t.innerHTML;});
+
+// typer
+var words=['حملات Meta Ads','مواقع WordPress','Landing Pages بتبيع','WhatsApp Marketing'],wi=0,ci=words[0].length,del=true,el=document.getElementById('typer');
+function type(){var w=words[wi];if(del){ci--;if(ci<=0){del=false;wi=(wi+1)%words.length;}}else{ci++;if(ci>=words[wi].length){del=true;el.textContent=words[wi];return setTimeout(type,1800);}}
+el.textContent=words[wi].slice(0,Math.max(ci,0))||'​';setTimeout(type,del?45:85);}
+if(!reduce)setTimeout(type,2600);
+
+// counters
+function count(elm){var to=+elm.dataset.to,pre=elm.dataset.pre||'',suf=elm.dataset.suf||'',t0=null,d=1600;
+function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/d,1),v=Math.round(to*(1-Math.pow(1-p,3)));elm.textContent=pre+v+suf;if(p<1)requestAnimationFrame(step);}
+if(reduce){elm.textContent=pre+to+suf}else requestAnimationFrame(step);}
+
+// reveal on scroll
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');
+if(e.target.id==='stats'){e.target.querySelectorAll('.count').forEach(count);e.target.querySelectorAll('.stat').forEach(function(s){s.classList.add('in')});}
+io.unobserve(e.target);}})},{threshold:.15});
+document.querySelectorAll('.reveal,.stagger').forEach(function(x){io.observe(x)});
+
+if(reduce||!matchMedia('(hover:hover)').matches)return;
+// cursor glow
+var g=document.getElementById('glow');
+addEventListener('mousemove',function(e){g.style.left=e.clientX+'px';g.style.top=e.clientY+'px';},{passive:true});
+// card tilt + spotlight
+document.querySelectorAll('.tilt').forEach(function(c){
+  c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;
+    c.style.setProperty('--mx',x+'px');c.style.setProperty('--my',y+'px');
+    c.style.transform='perspective(900px) rotateY('+((x/r.width-.5)*6)+'deg) rotateX('+(-(y/r.height-.5)*6)+'deg)';});
+  c.addEventListener('mouseleave',function(){c.style.transform='';});
+});
+// portrait parallax
+var p=document.getElementById('portrait');
+p.addEventListener('animationend',function(e){if(e.target===p){p.classList.remove('fade','d5');}});
+addEventListener('mousemove',function(e){var x=(e.clientX/innerWidth-.5),y=(e.clientY/innerHeight-.5);p.style.transform='translate('+(x*-14)+'px,'+(y*-10)+'px)';},{passive:true});
+})();
 </script>
 </body>
 </html>
