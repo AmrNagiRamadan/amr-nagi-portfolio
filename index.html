@@ -289,6 +289,31 @@ h1,h2,h3,h4,.btn,.logo,.tag,.eyebrow,.nav-links,summary,.chip b,.name-tag b{font
 .svc small{font-family:'IBM Plex Sans Arabic',sans-serif}
 @media (max-width:980px){.logos{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.logos{grid-template-columns:1fr}}
+
+/* case studies */
+.cases{display:grid;gap:22px;margin-top:26px}
+.cs{background:var(--card);border:1px solid var(--line);border-radius:30px;overflow:hidden;transition:border-color .3s}
+.cs:hover{border-color:#2c3a66}
+.cs-head{padding:32px 36px 26px;background:linear-gradient(135deg,rgba(21,88,201,.22),transparent 70%);border-bottom:1px solid var(--line)}
+.cs-tag{display:inline-block;color:var(--lime);font-weight:700;font-size:13px;margin-bottom:6px;font-family:'Cairo',sans-serif}
+.cs-head h3{font-size:clamp(22px,2.8vw,30px);font-weight:900;line-height:1.35}
+.cs-meta{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.cs-meta span{background:rgba(3,4,7,.5);border:1px solid var(--line);border-radius:14px;padding:8px 14px;font-weight:600;font-size:14px}
+.cs-meta small{display:block;color:var(--muted);font-size:12px;font-weight:500}
+.cs-meta b{color:var(--lime)}
+.cs-body{display:grid;grid-template-columns:1.5fr 1fr;gap:30px;padding:30px 36px 34px;align-items:center}
+.cs-body h4{font-size:17px;font-weight:800;margin-bottom:14px}
+.cs-list{list-style:none;display:grid;gap:10px}
+.cs-list li{display:flex;gap:10px;color:#cfd5e4;font-size:15px}
+.cs-list li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--blue-l);margin-top:10px}
+.cs-result{background:var(--blue);border-radius:22px;padding:26px;position:relative;overflow:hidden}
+.cs-result::after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;border:30px solid rgba(255,255,255,.07);top:-70px;left:-60px}
+.cs-result small{color:#cfe0ff;font-weight:700;font-size:13px}
+.cs-result b{display:block;color:var(--lime);font-size:clamp(30px,4vw,46px);font-weight:900;line-height:1.2;margin:4px 0 8px;font-family:'Cairo',sans-serif}
+.cs-result b.num{font-family:'Space Grotesk',sans-serif;text-align:right}
+.cs-result p{color:#e3ecff;font-size:15px;position:relative}
+@media (max-width:980px){.cs-body{grid-template-columns:1fr}}
+@media (max-width:560px){.cs-head,.cs-body{padding-inline:22px}}
 @media (max-width:980px){
   .hero-grid,.offers,.about,.case{grid-template-columns:1fr}
   .hero{min-height:auto;padding-top:110px}
@@ -380,7 +405,7 @@ h1,h2,h3,h4,.btn,.logo,.tag,.eyebrow,.nav-links,summary,.chip b,.name-tag b{font
     <p>خبرة عملية مع</p>
     <div class="logos stagger">
       <div class="brand"><div class="mk" style="background:var(--lime);color:var(--bg)">TT</div><div><b>TechnoTeam</b><small>وكالة تسويق رقمي</small></div></div>
-      <div class="brand"><div class="mk" style="background:var(--blue);color:#fff">D</div><div><b>Demos</b><small>حملات السوق السعودي</small></div></div>
+      <div class="brand"><div class="mk" style="background:var(--blue);color:#fff"><svg viewBox="0 0 24 24"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div><div><b>منصة تدريب سعودية</b><small>AI for HR</small></div></div>
       <div class="brand"><div class="mk" style="background:#fff;color:var(--bg)"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 000-7.8z"/></svg></div><div><b>مؤسسة إكرام</b><small>تسويق ونمو عبر واتساب</small></div></div>
       <div class="brand"><div class="mk" style="background:#1b2030;color:var(--lime)"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div><div><b>عملاء مستقلون</b><small>مواقع وحملات إعلانية</small></div></div>
     </div>
@@ -457,25 +482,99 @@ h1,h2,h3,h4,.btn,.logo,.tag,.eyebrow,.nav-links,summary,.chip b,.name-tag b{font
   <div class="wrap">
     <span class="eyebrow reveal">النتائج</span>
     <h2 class="title reveal">أرقام حقيقية. <span class="lime">نمو قابل للقياس.</span></h2>
-    <p class="lead reveal">نتائج تحققت في مشاريع عملت عليها في WhatsApp Marketing والإعلانات الممولة.</p>
+    <p class="lead reveal">نتائج من مشاريع حقيقية في الإعلانات الممولة وWhatsApp Marketing، وتفاصيل كل مشروع بالأسفل.</p>
     <div class="stats stagger" id="stats">
       <div class="stat"><b><span class="count" data-to="80" data-pre="+" data-suf="%">0</span></b><span>نمو في أداء قناة WhatsApp</span></div>
       <div class="stat"><b><span class="count" data-to="10" data-suf="x">0</span></b><span>عائد على الإنفاق (ROAS)</span></div>
-      <div class="stat"><b><span class="count" data-to="60" data-pre="+" data-suf="%">0</span></b><span>تحسّن في معدل فتح الرسائل</span></div>
+      <div class="stat"><b><span class="count" data-to="30" data-pre="-" data-suf="%">0</span></b><span>خفض تكلفة العميل المحتمل المؤهل</span></div>
       <div class="stat"><b><span class="count" data-to="2.5" data-dec="1" data-suf="%">0</span></b><span>معدل تحويل في حملات واسعة النطاق</span></div>
     </div>
-    <div class="case reveal" id="case">
-      <div>
-        <span class="eyebrow">دراسة حالة — مؤسسة إكرام</span>
-        <h3>تحويل قاعدة بيانات العميل إلى نظام نمو قابل للقياس.</h3>
-        <p>تقسيم الجمهور وفق القيمة الدائمة للعميل (CLV) وسلوكه، وتحسين الرسائل والمتابعة، وتصميم رحلة عميل متكاملة، ودمج AI Agents في المبيعات وخدمة العملاء.</p>
-      </div>
-      <div class="bars">
-        <div class="bar"><div><span>النمو</span><b>+80%</b></div><i style="--w:80%"></i></div>
-        <div class="bar"><div><span>العائد على الإنفاق</span><b>10x</b></div><i style="--w:100%"></i></div>
-        <div class="bar"><div><span>معدل الفتح</span><b>+60%</b></div><i style="--w:60%"></i></div>
-        <div class="bar"><div><span>معدل التحويل</span><b>2.5%</b></div><i style="--w:35%"></i></div>
-      </div>
+    <div class="cases">
+      <article class="cs reveal">
+        <div class="cs-head">
+          <span class="cs-tag">دراسة حالة 01 · عبر وكالة TechnoTeam</span>
+          <h3>شركة تدريب هندسي في مصر</h3>
+          <div class="cs-meta">
+            <span><small>المجال</small>كورسات للمهندسين</span>
+            <span><small>الإنفاق الشهري</small><b class="num">100,000</b> ج.م</span>
+            <span><small>المنصة</small>Meta Ads</span>
+          </div>
+        </div>
+        <div class="cs-body">
+          <div>
+            <h4>القرارات التي صنعت الفرق</h4>
+            <ul class="cs-list">
+              <li>بناء استراتيجية Media Buying تتناسب مع حجم الميزانية وأهداف المبيعات</li>
+              <li>هيكلة الحملات حسب كل مرحلة من مراحل الـFunnel بأهداف مختلفة</li>
+              <li>الفصل بين حملات Prospecting وRetargeting لاستهداف كل جمهور برسالته</li>
+              <li>اختبار مستمر للـCreatives والنصوص، والتوسّع في الزوايا الأعلى أداءً</li>
+              <li>تقارير دورية بتوصيات عملية لتحسين CPL وCPA ومعدل التحويل</li>
+            </ul>
+          </div>
+          <div class="cs-result">
+            <small>النتيجة</small>
+            <b>أداء مستقر وناجح</b>
+            <p>إدارة ميزانية شهرية كبيرة بكفاءة، مع تدفق منتظم من العملاء المهتمين بالكورسات.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="cs reveal">
+        <div class="cs-head">
+          <span class="cs-tag">دراسة حالة 02 · السوق السعودي</span>
+          <h3>منصة تدريب AI for HR</h3>
+          <div class="cs-meta">
+            <span><small>المجال</small>كورسات الذكاء الاصطناعي للموارد البشرية</span>
+            <span><small>الإنفاق الشهري</small><b class="num">10,000</b> ر.س</span>
+            <span><small>المنصة</small>Meta Ads</span>
+          </div>
+        </div>
+        <div class="cs-body">
+          <div>
+            <h4>القرارات التي صنعت الفرق</h4>
+            <ul class="cs-list">
+              <li>تحليل شامل لأداء الحملات السابقة لتحديد مصادر الهدر في الميزانية</li>
+              <li>إعادة بناء شرائح الجمهور والتركيز على الشرائح الأقرب للشراء</li>
+              <li>اختبار الـCreatives والنصوص الإعلانية والاحتفاظ بالأفضل أداءً فقط</li>
+              <li>التركيز على جودة الـLead لا على عدده</li>
+              <li>A/B Testing وتحسين يومي لمؤشرات CPL وCPA</li>
+            </ul>
+          </div>
+          <div class="cs-result">
+            <small>النتيجة</small>
+            <b class="num">-30%</b>
+            <p>انخفاض في تكلفة الحصول على عميل محتمل مؤهل.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="cs reveal">
+        <div class="cs-head">
+          <span class="cs-tag">دراسة حالة 03 · مؤسسة إكرام</span>
+          <h3>تحويل قاعدة البيانات إلى نظام نمو</h3>
+          <div class="cs-meta">
+            <span><small>المجال</small>مؤسسة غير ربحية</span>
+            <span><small>القناة</small>WhatsApp API</span>
+            <span><small>النطاق</small>قاعدة بيانات كبيرة</span>
+          </div>
+        </div>
+        <div class="cs-body">
+          <div>
+            <h4>القرارات التي صنعت الفرق</h4>
+            <ul class="cs-list">
+              <li>تقسيم الجمهور وفق القيمة الدائمة (CLV) وسلوك كل شريحة</li>
+              <li>إعادة صياغة الرسائل لكل شريحة بدلاً من رسالة واحدة للجميع</li>
+              <li>تصميم رحلة عميل متكاملة من أول تواصل حتى التحويل</li>
+              <li>دمج AI Agents في المبيعات وخدمة العملاء لتسريع الرد</li>
+            </ul>
+          </div>
+          <div class="cs-result">
+            <small>النتيجة</small>
+            <b class="num">10x</b>
+            <p>عائد على الإنفاق، مع نمو <span class="num">+80%</span> في أداء القناة وتحسّن <span class="num">+60%</span> في معدل فتح الرسائل.</p>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -484,10 +583,10 @@ h1,h2,h3,h4,.btn,.logo,.tag,.eyebrow,.nav-links,summary,.chip b,.name-tag b{font
 <section>
   <div class="wrap">
     <span class="eyebrow reveal">الخبرات</span>
-    <h2 class="title reveal">كل ما تحتاجه للنمو، <span class="blue">لدى شخص واحد.</span></h2>
+    <h2 class="title reveal">كل ما تحتاجه <span class="blue">للنمو.</span></h2>
     <div class="svc stagger">
       <div><span class="si"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></span><span>Meta Ads<small>Facebook وInstagram</small></span></div>
-      <div><span class="si"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></span><span>Snapchat وGoogle Ads<small>توسيع القنوات الإعلانية</small></span></div>
+      <div><span class="si"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></span><span>إعلانات Snapchat وGoogle<small>قنوات إعلانية إضافية بجانب Meta</small></span></div>
       <div><span class="si"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg></span><span>Lead Generation<small>عملاء محتملون بجودة أعلى</small></span></div>
       <div><span class="si"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4 19a1 1 0 001 2h14a1 1 0 001-2l-6-10V3"/></svg></span><span>Creative Testing<small>اختبار التصاميم والنصوص</small></span></div>
       <div><span class="si"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 01-12.6 7.3L3 21l2.2-5.4A8.5 8.5 0 1121 11.5z"/></svg></span><span>WhatsApp Marketing<small>تقسيم الجمهور وWhatsApp API</small></span></div>
@@ -529,7 +628,7 @@ h1,h2,h3,h4,.btn,.logo,.tag,.eyebrow,.nav-links,summary,.chip b,.name-tag b{font
       </ul>
       <div class="exp">
         <div><b>TechnoTeam Agency</b><span>Media Buyer · مصر والسعودية</span></div>
-        <div><b>Demos</b><span>Media Buyer · السوق السعودي</span></div>
+        <div><b>منصة تدريب AI for HR</b><span>Media Buyer · السوق السعودي</span></div>
         <div><b>مؤسسة إكرام</b><span>WhatsApp Marketing & Growth</span></div>
         <div><b>عمل مستقل</b><span>WordPress · Landing Pages</span></div>
       </div>
