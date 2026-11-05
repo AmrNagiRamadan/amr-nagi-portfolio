@@ -4,26 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>عمرو ناجي | Media Buying ومواقع WordPress</title>
-<meta name="description" content="عمرو ناجي — Media Buyer ومطوّر مواقع WordPress. حملات Meta Ads بتجيب عملاء، ومواقع وLanding Pages بتحوّل الزيارات لمبيعات. مصر والسعودية.">
+<meta name="description" content="عمرو ناجي — Media Buyer ومطوّر مواقع WordPress. إدارة حملات Meta Ads وتطوير مواقع وصفحات هبوط عالية التحويل للشركات في مصر والسعودية.">
 <meta name="theme-color" content="#030407">
 <meta property="og:title" content="عمرو ناجي | Media Buying ومواقع WordPress">
-<meta property="og:description" content="إعلانات بتجيب عملاء، ومواقع بتحوّلهم لمبيعات.">
+<meta property="og:description" content="إعلانات تبيع، ومواقع تحوّل الزوار إلى عملاء.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://amrnagiramadan.github.io/amr-nagi-portfolio/amr.jpg">
 <meta property="og:url" content="https://amrnagiramadan.github.io/amr-nagi-portfolio/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#030407; --bg2:#090b12; --card:#0d1019; --line:#1b2030; --ink:#f4f6fb; --muted:#9aa3b8;
+  --bg:#030407; --bg2:#090b12; --card:#0d1019; --line:#1b2030; --ink:#f4f6fb; --muted:#aab3c7;
   --blue:#1558C9; --blue-l:#3b7bf0; --lime:#D4FF24;
   --radius:24px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden}
 main{overflow-x:clip}
-body{font-family:'Cairo',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 ::selection{background:var(--lime);color:var(--bg)}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
@@ -91,7 +91,7 @@ header.scrolled{background:rgba(3,4,7,.75);backdrop-filter:blur(14px);border-bot
 .hl svg{position:absolute;inset:auto 0 -10px 0;width:100%;height:20px;overflow:visible}
 .hl path{fill:none;stroke:var(--blue-l);stroke-width:5;stroke-linecap:round;stroke-dasharray:400;stroke-dashoffset:400;animation:draw 1s .9s forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
-.typer{color:var(--ink);font-weight:800;border-left:3px solid var(--lime);padding-left:4px;animation:blink 1s step-end infinite}
+.typer{white-space:nowrap;color:var(--ink);font-weight:800;border-left:3px solid var(--lime);padding-left:4px;animation:blink 1s step-end infinite}
 @keyframes blink{50%{border-color:transparent}}
 .hero .lead{font-size:clamp(17px,2.1vw,20px);max-width:640px}
 .fade{opacity:0;transform:translateY(18px);animation:fadeUp .8s forwards}
@@ -174,7 +174,8 @@ header.scrolled{background:rgba(3,4,7,.75);backdrop-filter:blur(14px);border-bot
 .stat::after{content:"";position:absolute;bottom:0;right:0;height:3px;width:0;background:linear-gradient(90deg,var(--lime),var(--blue));transition:width 1.4s .2s}
 .stat.in::after{width:100%}
 .stat b{display:block;font-family:'Space Grotesk',sans-serif;font-size:clamp(40px,5vw,58px);font-weight:700;color:var(--lime);line-height:1.1;direction:ltr;text-align:right}
-.stat span{color:var(--muted);font-weight:700;font-size:15px}
+.stat>span{color:var(--muted);font-weight:600;font-size:15px}
+.stat b .count{font:inherit;color:inherit}
 .case{margin-top:22px;border-radius:30px;padding:44px;display:grid;grid-template-columns:1.2fr 1fr;gap:34px;align-items:center;background:linear-gradient(135deg,var(--blue),#0c3a8f);position:relative;overflow:hidden}
 .case::before{content:"";position:absolute;width:400px;height:400px;border-radius:50%;border:60px solid rgba(255,255,255,.06);top:-180px;left:-120px}
 .case .eyebrow{color:var(--lime)}
@@ -260,6 +261,34 @@ footer a:hover{color:var(--lime)}
 .stagger.in>*:nth-child(2){transition-delay:.08s}.stagger.in>*:nth-child(3){transition-delay:.16s}.stagger.in>*:nth-child(4){transition-delay:.24s}
 .stagger.in>*:nth-child(5){transition-delay:.32s}.stagger.in>*:nth-child(6){transition-delay:.4s}.stagger.in>*:nth-child(7){transition-delay:.48s}.stagger.in>*:nth-child(8){transition-delay:.56s}
 
+
+h1,h2,h3,h4,.btn,.logo,.tag,.eyebrow,.nav-links,summary,.chip b,.name-tag b{font-family:'Cairo','IBM Plex Sans Arabic',sans-serif}
+.lead{line-height:1.9}
+/* proof row */
+.proof{gap:10px 22px}
+.proof .pi{display:inline-flex;align-items:center;gap:8px;color:#cfd5e4;font-weight:600;font-size:14px}
+.proof .pi svg{width:18px;height:18px;stroke:var(--lime);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+/* trusted cards */
+.trusted{padding:80px 0 10px}
+.trusted p{font-size:15px;letter-spacing:.3px}
+.logos{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;color:inherit;font-size:inherit}
+.brand{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px 20px;transition:.3s}
+.brand:hover{border-color:#2c3a66;transform:translateY(-4px)}
+.brand .mk{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;flex:none;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px}
+.brand .mk svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.brand b{display:block;font-size:17px;font-weight:700;color:#fff;font-family:'Cairo',sans-serif;line-height:1.3}
+.brand small{color:var(--muted);font-size:13px;font-weight:500}
+/* pain icons */
+.pain .x{width:52px;height:52px;border-radius:16px;background:rgba(21,88,201,.14);border:1px solid rgba(59,123,240,.3);color:var(--blue-l);margin-bottom:18px}
+.pain .x svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pain div{transition:.3s}.pain>div:hover{border-color:#2c3a66;transform:translateY(-4px)}
+/* service icons */
+.svc div{display:flex;gap:14px;align-items:flex-start;font-family:'Cairo',sans-serif}
+.svc .si{width:42px;height:42px;border-radius:12px;background:rgba(212,255,36,.1);display:grid;place-items:center;flex:none}
+.svc .si svg{width:20px;height:20px;fill:none;stroke:var(--lime);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.svc small{font-family:'IBM Plex Sans Arabic',sans-serif}
+@media (max-width:980px){.logos{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.logos{grid-template-columns:1fr}}
 @media (max-width:980px){
   .hero-grid,.offers,.about,.case{grid-template-columns:1fr}
   .hero{min-height:auto;padding-top:110px}
@@ -296,11 +325,11 @@ footer a:hover{color:var(--lime)}
     <nav class="nav-links" id="nav">
       <a href="#offers">الخدمات</a>
       <a href="#results">النتائج</a>
-      <a href="#process">طريقة الشغل</a>
-      <a href="#about">مين أنا</a>
-      <a href="#faq">أسئلة شائعة</a>
+      <a href="#process">منهجية العمل</a>
+      <a href="#about">من أنا</a>
+      <a href="#faq">الأسئلة الشائعة</a>
     </nav>
-    <a class="btn btn-lime" href="https://wa.me/201025168758?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%B9%D9%85%D8%B1%D9%88%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9" target="_blank" rel="noopener">احجز استشارة مجانية</a>
+    <a class="btn btn-lime" href="https://wa.me/201025168758?text=مرحباً عمرو، أرغب في حجز استشارة مجانية" target="_blank" rel="noopener">احجز استشارة مجانية</a>
     <button class="menu-btn" id="menuBtn" aria-label="القائمة"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -311,19 +340,20 @@ footer a:hover{color:var(--lime)}
   <div class="hero-bg"><div class="grid-bg"></div><div class="blob b1"></div><div class="blob b2"></div></div>
   <div class="wrap hero-grid">
     <div>
-      <span class="pill fade"><span class="dot"></span>متاح لمشاريع جديدة — مصر والسعودية</span>
+      <span class="pill fade"><span class="dot"></span>متاح لمشاريع جديدة في مصر والسعودية</span>
       <h1>
-        <span class="line"><span>إعلانات بتبيع.</span></span>
-        <span class="line"><span>ومواقع <span class="hl">بتحوّل.<svg viewBox="0 0 200 20" preserveAspectRatio="none"><path d="M3 14 Q 60 2 110 10 T 197 6"/></svg></span></span></span>
+        <span class="line"><span>إعلانات تبيع.</span></span>
+        <span class="line"><span>ومواقع <span class="hl">تحوّل.<svg viewBox="0 0 200 20" preserveAspectRatio="none"><path d="M3 14 Q 60 2 110 10 T 197 6"/></svg></span></span></span>
       </h1>
-      <p class="lead fade d1">بساعد البيزنس يجيب عملاء أكتر بتكلفة أقل — <span class="typer" id="typer">حملات Meta Ads</span></p>
+      <p class="lead fade d1">أساعد الشركات على تحقيق مبيعات أعلى بتكلفة استحواذ أقل، من خلال<br><span class="typer" id="typer">إدارة حملات Meta Ads</span></p>
       <div class="hero-cta fade d2">
-        <a class="btn btn-lime" href="#offers">عايز أزوّد مبيعاتي ←</a>
-        <a class="btn btn-ghost" href="https://wa.me/201025168758" target="_blank" rel="noopener">كلمني واتساب</a>
+        <a class="btn btn-lime" href="https://wa.me/201025168758?text=مرحباً عمرو، أرغب في حجز استشارة مجانية" target="_blank" rel="noopener">احجز استشارة مجانية ←</a>
+        <a class="btn btn-ghost" href="#offers">استعرض الخدمات</a>
       </div>
       <div class="proof fade d3">
-        <div class="faces"><i style="background:var(--lime);color:var(--bg)">T</i><i style="background:var(--blue)">D</i><i style="background:#fff;color:var(--bg)">إ</i><i style="background:#1b2030">+</i></div>
-        <small><span class="stars">★★★★★</span><br>شغل حقيقي مع <b>شركات ووكالات</b> في مصر والسعودية</small>
+        <span class="pi"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>خبرة في السوقين المصري والسعودي</span>
+        <span class="pi"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>حملات بميزانيات كبيرة</span>
+        <span class="pi"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>إعلانات ومواقع تحت سقف واحد</span>
       </div>
     </div>
 
@@ -333,34 +363,39 @@ footer a:hover{color:var(--lime)}
         <img src="amr.jpg" alt="عمرو ناجي — Media Buyer" fetchpriority="high">
         <div class="name-tag"><b>عمرو ناجي</b><span>Media Buyer · WordPress Developer</span></div>
       </div>
-      <div class="chip c1"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div><div><b>10x</b><span>ROAS</span></div></div>
-      <div class="chip c2"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-7 7-7s7 3 7 7"/><path d="M17 11a3 3 0 100-6M22 21c0-3-2-5-4-6"/></svg></div><div><b>130K+</b><span>عميل</span></div></div>
-      <div class="chip c3"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div><b>+80%</b><span>نمو</span></div></div>
+      <div class="chip c1"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div><div><b>10x</b><span>عائد على الإنفاق</span></div></div>
+      <div class="chip c2"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div><div><b>2.5%</b><span>معدل التحويل</span></div></div>
+      <div class="chip c3"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></div><div><b>+80%</b><span>نمو في الأداء</span></div></div>
     </div>
   </div>
 </section>
 
 <!-- MARQUEE -->
 <div class="marquee"><div class="track" id="t1"><span>Meta Ads</span><span>Lead Generation</span><span>WordPress</span><span>Landing Pages</span><span>WhatsApp Marketing</span><span>ROAS</span><span>Creative Testing</span><span>WooCommerce</span><span>Retargeting</span></div></div>
-<div class="marquee alt"><div class="track" id="t2"><span>إعلانات بتبيع</span><span>مواقع بتحوّل</span><span>قرارات بالـData</span><span>عملاء أكتر</span><span>تكلفة أقل</span><span>نمو حقيقي</span></div></div>
+<div class="marquee alt"><div class="track" id="t2"><span>إعلانات تبيع</span><span>مواقع تحوّل</span><span>قرارات مبنية على البيانات</span><span>عملاء أكثر</span><span>تكلفة أقل</span><span>نمو قابل للقياس</span></div></div>
 
 <!-- TRUSTED -->
 <div class="trusted">
   <div class="wrap">
-    <p>اشتغلت مع</p>
-    <div class="logos stagger"><span>TechnoTeam</span><span>Demos</span><span>مؤسسة إكرام</span><span>Freelance Clients</span></div>
+    <p>خبرة عملية مع</p>
+    <div class="logos stagger">
+      <div class="brand"><div class="mk" style="background:var(--lime);color:var(--bg)">TT</div><div><b>TechnoTeam</b><small>وكالة تسويق رقمي</small></div></div>
+      <div class="brand"><div class="mk" style="background:var(--blue);color:#fff">D</div><div><b>Demos</b><small>حملات السوق السعودي</small></div></div>
+      <div class="brand"><div class="mk" style="background:#fff;color:var(--bg)"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 000-7.8z"/></svg></div><div><b>مؤسسة إكرام</b><small>تسويق ونمو عبر واتساب</small></div></div>
+      <div class="brand"><div class="mk" style="background:#1b2030;color:var(--lime)"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div><div><b>عملاء مستقلون</b><small>مواقع وحملات إعلانية</small></div></div>
+    </div>
   </div>
 </div>
 
 <!-- PAIN -->
 <section>
   <div class="wrap">
-    <span class="eyebrow reveal">المشكلة</span>
-    <h2 class="title reveal">بتصرف على الإعلانات… <span class="blue">والمبيعات مش جاية؟</span></h2>
+    <span class="eyebrow reveal">التحدي</span>
+    <h2 class="title reveal">تنفق على الإعلانات… <span class="blue">لكن المبيعات لا تتناسب مع الميزانية؟</span></h2>
     <div class="pain stagger">
-      <div><div class="x">✕</div><h4>تكلفة الليد عالية</h4><p>بتدفع كتير على كل عميل محتمل، ونص الليدز مش مهتمين أصلاً.</p></div>
-      <div><div class="x">✕</div><h4>الموقع مش بيقنع</h4><p>الزيارات بتيجي وتمشي، لأن الصفحة مش معمولة عشان تبيع.</p></div>
-      <div><div class="x">✕</div><h4>قرارات بالتخمين</h4><p>مفيش تتبّع واضح، فمش عارف أنهي إعلان بيجيب فلوس فعلاً.</p></div>
+      <div><div class="x"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15 9.5a3 3 0 00-3-1.5c-1.7 0-3 .9-3 2s1.3 1.7 3 2 3 .9 3 2-1.3 2-3 2a3 3 0 01-3-1.5M12 6v2M12 16v2"/></svg></div><h4>تكلفة مرتفعة لكل عميل محتمل</h4><p>تدفع مبالغ كبيرة مقابل كل Lead، وجزء كبير منهم غير مؤهل للشراء.</p></div>
+      <div><div class="x"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 14l2 2 4-4"/></svg></div><h4>موقع لا يُقنع الزائر</h4><p>الزيارات تصل ثم تغادر، لأن الصفحة لم تُصمَّم أساساً لتحقيق المبيعات.</p></div>
+      <div><div class="x"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 14l3-3 3 3 5-5"/><circle cx="18" cy="5" r="0.5"/></svg></div><h4>قرارات بلا بيانات واضحة</h4><p>غياب التتبّع الدقيق يجعل من الصعب معرفة أي إعلان يحقق العائد فعلاً.</p></div>
     </div>
   </div>
 </section>
@@ -369,50 +404,50 @@ footer a:hover{color:var(--lime)}
 <section id="offers" style="padding-top:0">
   <div class="wrap">
     <span class="eyebrow reveal">الحل</span>
-    <h2 class="title reveal">خدمتين… <span class="lime">بيكمّلوا بعض.</span></h2>
-    <p class="lead reveal">إعلانات بتجيب الناس الصح، وموقع بيقنعهم يشتروا.</p>
+    <h2 class="title reveal">خدمتان… <span class="lime">تكمّل إحداهما الأخرى.</span></h2>
+    <p class="lead reveal">إعلانات تستهدف الجمهور الصحيح، وموقع مصمَّم لتحويل هذا الجمهور إلى عملاء.</p>
 
     <div class="offers">
       <div class="offer feat reveal tilt">
         <span class="tag">الأكثر طلباً</span>
         <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-6"/><path d="M15 8h5v5"/></svg></div>
         <h3>Media Buying</h3>
-        <p class="muted">إدارة إعلاناتك على Meta بهدف واحد: عملاء أكتر بتكلفة أقل.</p>
+        <p class="muted">إدارة احترافية لحملاتك على Meta بهدف واضح: عملاء أكثر بتكلفة أقل.</p>
         <ul>
-          <li>Audit كامل لحسابك الإعلاني والـFunnel</li>
-          <li>Media Buying Strategy على أهدافك وميزانيتك</li>
+          <li>مراجعة شاملة للحساب الإعلاني ومسار التحويل</li>
+          <li>استراتيجية Media Buying مبنية على أهدافك وميزانيتك</li>
           <li>حملات Lead Generation وConversion</li>
-          <li>Audience Testing وCreative Testing مستمر</li>
-          <li>Prospecting وRetargeting</li>
-          <li>تحسين يومي لـCPL وCPA وROAS</li>
-          <li>تقرير أداء دوري بتوصيات واضحة</li>
+          <li>اختبار مستمر للجماهير والتصاميم الإعلانية</li>
+          <li>حملات Prospecting وRetargeting</li>
+          <li>تحسين يومي لمؤشرات CPL وCPA وROAS</li>
+          <li>تقارير أداء دورية بتوصيات عملية</li>
         </ul>
-        <a class="btn btn-lime" href="https://wa.me/201025168758?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B9%D8%B1%D9%81%20%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A7%D9%84%D9%80Media%20Buying" target="_blank" rel="noopener">ابدأ حملتك ←</a>
+        <a class="btn btn-lime" href="https://wa.me/201025168758?text=مرحباً عمرو، أرغب في معرفة تفاصيل خدمة Media Buying" target="_blank" rel="noopener">ابدأ حملتك الآن ←</a>
       </div>
 
       <div class="offer reveal tilt">
         <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/><path d="M8 21h8"/><path d="M12 18v3"/></svg></div>
         <h3>مواقع WordPress</h3>
-        <p class="muted">موقع أو Landing Page سريعة ومتظبطة عشان تبيع، مش بس شكلها حلو.</p>
+        <p class="muted">مواقع وصفحات هبوط سريعة، مصمَّمة لتحقيق المبيعات لا للمظهر فقط.</p>
         <ul>
-          <li>تصميم Responsive على الموبايل والكمبيوتر</li>
-          <li>Landing Pages مخصوصة للحملات الإعلانية</li>
-          <li>متاجر إلكترونية WooCommerce</li>
-          <li>زرار واتساب وفورم ليدز متوصّلين</li>
-          <li>ربط Meta Pixel وتتبّع التحويلات</li>
-          <li>سرعة تحميل وSEO أساسي</li>
-          <li>تسليم وتدريب على إدارة الموقع</li>
+          <li>تصميم متجاوب مع جميع الأجهزة</li>
+          <li>صفحات هبوط مخصصة للحملات الإعلانية</li>
+          <li>متاجر إلكترونية عبر WooCommerce</li>
+          <li>ربط زر واتساب ونماذج جمع البيانات</li>
+          <li>تركيب Meta Pixel وتتبّع التحويلات</li>
+          <li>سرعة تحميل عالية وتهيئة أساسية لمحركات البحث</li>
+          <li>تسليم كامل مع تدريب على إدارة الموقع</li>
         </ul>
-        <a class="btn btn-blue" href="https://wa.me/201025168758?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B9%D9%85%D9%84%20%D9%85%D9%88%D9%82%D8%B9%20WordPress" target="_blank" rel="noopener">اطلب موقعك ←</a>
+        <a class="btn btn-blue" href="https://wa.me/201025168758?text=مرحباً عمرو، أرغب في تنفيذ موقع WordPress" target="_blank" rel="noopener">اطلب موقعك الآن ←</a>
       </div>
     </div>
 
     <div class="combo reveal">
       <div>
-        <h4>🔥 الباقة المتكاملة: موقع + إعلانات</h4>
-        <p>أبنيلك Landing Page وأشغّل عليها الحملات — كل حاجة متربطة ومتتبّعة من أول يوم.</p>
+        <h4>الباقة المتكاملة: موقع + إعلانات</h4>
+        <p>صفحة هبوط احترافية وحملات إعلانية مترابطة ومتتبَّعة بالكامل من اليوم الأول.</p>
       </div>
-      <a class="btn" href="https://wa.me/201025168758?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D9%85%D8%AA%D9%83%D8%A7%D9%85%D9%84%D8%A9%20(%D9%85%D9%88%D9%82%D8%B9%20%2B%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86%D8%A7%D8%AA)" target="_blank" rel="noopener">اطلب عرض سعر ←</a>
+      <a class="btn" href="https://wa.me/201025168758?text=مرحباً عمرو، أرغب في عرض سعر للباقة المتكاملة (موقع + إعلانات)" target="_blank" rel="noopener">اطلب عرض سعر ←</a>
     </div>
   </div>
 </section>
@@ -421,24 +456,25 @@ footer a:hover{color:var(--lime)}
 <section id="results" style="background:var(--bg2)">
   <div class="wrap">
     <span class="eyebrow reveal">النتائج</span>
-    <h2 class="title reveal">أرقام حقيقية. <span class="lime">نمو حقيقي.</span></h2>
+    <h2 class="title reveal">أرقام حقيقية. <span class="lime">نمو قابل للقياس.</span></h2>
+    <p class="lead reveal">نتائج تحققت في مشاريع عملت عليها في WhatsApp Marketing والإعلانات الممولة.</p>
     <div class="stats stagger" id="stats">
-      <div class="stat"><b><span class="count" data-to="80" data-pre="+" data-suf="%">0</span></b><span>نمو في أداء WhatsApp Marketing</span></div>
-      <div class="stat"><b><span class="count" data-to="10" data-suf="x">0</span></b><span>ROAS في حملات WhatsApp API</span></div>
-      <div class="stat"><b><span class="count" data-to="130" data-suf="K+">0</span></b><span>عميل بـSegmentation يومي</span></div>
-      <div class="stat"><b><span class="count" data-to="60" data-pre="+" data-suf="%">0</span></b><span>Open Rate بعد تحسين الرسائل</span></div>
+      <div class="stat"><b><span class="count" data-to="80" data-pre="+" data-suf="%">0</span></b><span>نمو في أداء قناة WhatsApp</span></div>
+      <div class="stat"><b><span class="count" data-to="10" data-suf="x">0</span></b><span>عائد على الإنفاق (ROAS)</span></div>
+      <div class="stat"><b><span class="count" data-to="60" data-pre="+" data-suf="%">0</span></b><span>تحسّن في معدل فتح الرسائل</span></div>
+      <div class="stat"><b><span class="count" data-to="2.5" data-dec="1" data-suf="%">0</span></b><span>معدل تحويل في حملات واسعة النطاق</span></div>
     </div>
     <div class="case reveal" id="case">
       <div>
-        <span class="eyebrow">Case Study — مؤسسة إكرام</span>
-        <h3>قاعدة بيانات 130 ألف عميل اتحوّلت لنظام نمو قابل للقياس.</h3>
-        <p>تقسيم الجمهور على أساس CLV والسلوك، تحسين الرسائل والمتابعة، تصميم Customer Journey كاملة، ودمج AI Agents في المبيعات وخدمة العملاء.</p>
+        <span class="eyebrow">دراسة حالة — مؤسسة إكرام</span>
+        <h3>تحويل قاعدة بيانات العميل إلى نظام نمو قابل للقياس.</h3>
+        <p>تقسيم الجمهور وفق القيمة الدائمة للعميل (CLV) وسلوكه، وتحسين الرسائل والمتابعة، وتصميم رحلة عميل متكاملة، ودمج AI Agents في المبيعات وخدمة العملاء.</p>
       </div>
       <div class="bars">
-        <div class="bar"><div><span>Growth</span><b>+80%</b></div><i style="--w:80%"></i></div>
-        <div class="bar"><div><span>ROAS</span><b>10x</b></div><i style="--w:100%"></i></div>
-        <div class="bar"><div><span>Open Rate</span><b>+60%</b></div><i style="--w:60%"></i></div>
-        <div class="bar"><div><span>Conversion Rate</span><b>2.5%</b></div><i style="--w:35%"></i></div>
+        <div class="bar"><div><span>النمو</span><b>+80%</b></div><i style="--w:80%"></i></div>
+        <div class="bar"><div><span>العائد على الإنفاق</span><b>10x</b></div><i style="--w:100%"></i></div>
+        <div class="bar"><div><span>معدل الفتح</span><b>+60%</b></div><i style="--w:60%"></i></div>
+        <div class="bar"><div><span>معدل التحويل</span><b>2.5%</b></div><i style="--w:35%"></i></div>
       </div>
     </div>
   </div>
@@ -447,17 +483,17 @@ footer a:hover{color:var(--lime)}
 <!-- SERVICES -->
 <section>
   <div class="wrap">
-    <span class="eyebrow reveal">كل اللي تحتاجه</span>
-    <h2 class="title reveal">التسويق والموقع، <span class="blue">مع شخص واحد.</span></h2>
+    <span class="eyebrow reveal">الخبرات</span>
+    <h2 class="title reveal">كل ما تحتاجه للنمو، <span class="blue">لدى شخص واحد.</span></h2>
     <div class="svc stagger">
-      <div>Meta Ads<small>Facebook & Instagram</small></div>
-      <div>Snapchat & Google Ads<small>توسيع القنوات</small></div>
-      <div>Lead Generation<small>ليدز بجودة أعلى</small></div>
-      <div>Creative Testing<small>أفضل Angles وAd Copies</small></div>
-      <div>WhatsApp Marketing<small>Segmentation وAPI</small></div>
-      <div>WordPress<small>مواقع ومتاجر</small></div>
-      <div>Landing Pages<small>صفحات بتحوّل</small></div>
-      <div>Analytics & Reports<small>CPL · CPA · ROAS</small></div>
+      <div><span class="si"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></span><span>Meta Ads<small>Facebook وInstagram</small></span></div>
+      <div><span class="si"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></span><span>Snapchat وGoogle Ads<small>توسيع القنوات الإعلانية</small></span></div>
+      <div><span class="si"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg></span><span>Lead Generation<small>عملاء محتملون بجودة أعلى</small></span></div>
+      <div><span class="si"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4 19a1 1 0 001 2h14a1 1 0 001-2l-6-10V3"/></svg></span><span>Creative Testing<small>اختبار التصاميم والنصوص</small></span></div>
+      <div><span class="si"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 01-12.6 7.3L3 21l2.2-5.4A8.5 8.5 0 1121 11.5z"/></svg></span><span>WhatsApp Marketing<small>تقسيم الجمهور وWhatsApp API</small></span></div>
+      <div><span class="si"><svg viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></span><span>WordPress<small>مواقع ومتاجر إلكترونية</small></span></div>
+      <div><span class="si"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></span><span>Landing Pages<small>صفحات هبوط عالية التحويل</small></span></div>
+      <div><span class="si"><svg viewBox="0 0 24 24"><path d="M21 21H4V3"/><path d="M8 17V11M12 17V7M16 17v-4M20 17V9"/></svg></span><span>التحليل والتقارير<small>CPL · CPA · ROAS</small></span></div>
     </div>
   </div>
 </section>
@@ -465,13 +501,13 @@ footer a:hover{color:var(--lime)}
 <!-- PROCESS -->
 <section id="process" style="padding-top:0">
   <div class="wrap">
-    <span class="eyebrow reveal">طريقة الشغل</span>
-    <h2 class="title reveal">4 خطوات من أول مكالمة <span class="lime">لحد النتايج.</span></h2>
+    <span class="eyebrow reveal">منهجية العمل</span>
+    <h2 class="title reveal">أربع خطوات من أول اجتماع <span class="lime">حتى النتائج.</span></h2>
     <div class="steps stagger">
-      <div class="step"><div class="n">01</div><h4>Audit</h4><p>أفهم البيزنس والعرض والبيانات والـFunnel قبل أي قرار.</p></div>
-      <div class="step"><div class="n">02</div><h4>Strategy</h4><p>أحدد الهدف والجمهور والـCreative Angles والـKPIs.</p></div>
-      <div class="step"><div class="n">03</div><h4>Build & Launch</h4><p>أجهّز الموقع أو الـLanding Page وأطلق الحملات بتتبّع كامل.</p></div>
-      <div class="step"><div class="n">04</div><h4>Optimize</h4><p>اختبارات منظمة وتحسين يومي مبني على الأرقام.</p></div>
+      <div class="step"><div class="n">01</div><h4>التحليل</h4><p>دراسة النشاط التجاري والعرض والبيانات ومسار التحويل قبل اتخاذ أي قرار.</p></div>
+      <div class="step"><div class="n">02</div><h4>الاستراتيجية</h4><p>تحديد الأهداف والجمهور والزوايا الإعلانية ومؤشرات الأداء الرئيسية.</p></div>
+      <div class="step"><div class="n">03</div><h4>التنفيذ والإطلاق</h4><p>تجهيز الموقع أو صفحة الهبوط وإطلاق الحملات مع تتبّع كامل للتحويلات.</p></div>
+      <div class="step"><div class="n">04</div><h4>التحسين المستمر</h4><p>اختبارات منهجية وتحسين يومي قائم على الأرقام لخفض التكلفة ورفع العائد.</p></div>
     </div>
   </div>
 </section>
@@ -481,23 +517,23 @@ footer a:hover{color:var(--lime)}
   <div class="wrap about">
     <div class="about-img reveal">
       <img src="amr.jpg" alt="عمرو ناجي" loading="lazy">
-      <div class="badge"><div><b>2</b><span>أسواق</span></div><div><b>4+</b><span>جهات عمل</span></div><div><b>10x</b><span>ROAS</span></div></div>
+      <div class="badge"><div><b>2</b><span>سوقان</span></div><div><b>4+</b><span>جهات عمل</span></div><div><b>10x</b><span>ROAS</span></div></div>
     </div>
     <div class="reveal">
-      <span class="eyebrow">مين أنا</span>
-      <h2 class="title">أكتر من Media Buyer. <span class="lime">شريك في النمو.</span></h2>
-      <p class="lead">أنا عمرو ناجي، Media Buyer ومتخصص Performance Marketing. بدير حملات Meta Ads بإنفاق مرتفع في السوقين المصري والسعودي، وعندي خلفية Web Development بتخليني أفهم إزاي تجربة الموقع بتأثر على الـConversion.</p>
+      <span class="eyebrow">من أنا</span>
+      <h2 class="title">أكثر من Media Buyer. <span class="lime">شريك في النمو.</span></h2>
+      <p class="lead">أنا عمرو ناجي، متخصص في Performance Marketing وإدارة الحملات الإعلانية. أدير حملات Meta Ads بميزانيات كبيرة في السوقين المصري والسعودي، وتمنحني خلفيتي في تطوير المواقع فهماً عميقاً لتأثير تجربة المستخدم على معدلات التحويل.</p>
       <ul class="checks">
-        <li>بربط الإعلان بكل اللي بعده: الموقع، الواتساب، والمبيعات</li>
-        <li>قرارات مبنية على Data مش على رقم واحد في Ads Manager</li>
+        <li>أربط الإعلان بكل ما يليه: الموقع، وواتساب، وعملية البيع</li>
+        <li>قرارات مبنية على تحليل البيانات، لا على مؤشر واحد في Ads Manager</li>
       </ul>
       <div class="exp">
         <div><b>TechnoTeam Agency</b><span>Media Buyer · مصر والسعودية</span></div>
         <div><b>Demos</b><span>Media Buyer · السوق السعودي</span></div>
         <div><b>مؤسسة إكرام</b><span>WhatsApp Marketing & Growth</span></div>
-        <div><b>Freelance</b><span>WordPress · Landing Pages</span></div>
+        <div><b>عمل مستقل</b><span>WordPress · Landing Pages</span></div>
       </div>
-      <a class="btn btn-lime" href="https://wa.me/201025168758" target="_blank" rel="noopener">يلا نتكلم ←</a>
+      <a class="btn btn-lime" href="https://wa.me/201025168758?text=مرحباً عمرو، أرغب في التواصل معك" target="_blank" rel="noopener">لنبدأ الحديث ←</a>
     </div>
   </div>
 </section>
@@ -506,15 +542,15 @@ footer a:hover{color:var(--lime)}
 <section id="faq">
   <div class="wrap">
     <div style="text-align:center">
-      <span class="eyebrow reveal">أسئلة شائعة</span>
-      <h2 class="title reveal">حاجات كويس تعرفها.</h2>
+      <span class="eyebrow reveal">الأسئلة الشائعة</span>
+      <h2 class="title reveal">إجابات قبل أن تسأل.</h2>
     </div>
     <div class="faq stagger">
-      <details><summary>أقل ميزانية إعلانات أبدأ بيها كام؟</summary><p>بتفرق حسب المجال والسوق والهدف. في الاستشارة المجانية بنحدد ميزانية واقعية تديك Data كفاية تبني عليها قرارات.</p></details>
-      <details><summary>هشوف نتايج إمتى؟</summary><p>أول أسبوعين بيكونوا مرحلة Testing لجمع البيانات، وبعدها بنبدأ نركّز الميزانية على اللي شغال ونحسّن التكلفة.</p></details>
-      <details><summary>الموقع بياخد وقت قد إيه؟</summary><p>الـLanding Page غالباً في أيام قليلة، والموقع الكامل أو المتجر حسب عدد الصفحات والمنتجات. بنتفق على جدول واضح قبل ما نبدأ.</p></details>
-      <details><summary>هل بتشتغل مع عملاء في السعودية؟</summary><p>أيوه، عندي خبرة مباشرة في حملات السوق السعودي، وبشتغل Remote مع عملاء في مصر والسعودية.</p></details>
-      <details><summary>هعرف أتابع الأداء إزاي؟</summary><p>هتوصلك تقارير دورية فيها الأرقام المهمة (CPL، CPA، ROAS) والتوصيات الجاية، ولو عندك موقع هيكون التتبّع متظبط عليه.</p></details>
+      <details><summary>ما الحد الأدنى لميزانية الإعلانات للبدء؟</summary><p>يختلف ذلك حسب المجال والسوق والهدف. في الاستشارة المجانية نحدد ميزانية واقعية توفّر بيانات كافية لاتخاذ قرارات صحيحة.</p></details>
+      <details><summary>متى تبدأ النتائج في الظهور؟</summary><p>يُخصَّص أول أسبوعين عادةً لمرحلة الاختبار وجمع البيانات، ثم نركّز الميزانية على ما يحقق أفضل أداء ونعمل على خفض التكلفة.</p></details>
+      <details><summary>كم يستغرق تنفيذ الموقع؟</summary><p>تُنفَّذ صفحة الهبوط عادةً خلال أيام قليلة، أما الموقع الكامل أو المتجر فيعتمد على عدد الصفحات والمنتجات، ونتفق على جدول زمني واضح قبل البدء.</p></details>
+      <details><summary>هل تعمل مع عملاء في السعودية؟</summary><p>نعم، لديّ خبرة مباشرة في حملات السوق السعودي، وأعمل عن بُعد مع عملاء في مصر والسعودية.</p></details>
+      <details><summary>كيف أتابع أداء الحملات؟</summary><p>ستصلك تقارير دورية تتضمن المؤشرات الأساسية (CPL وCPA وROAS) مع توصيات واضحة للمرحلة التالية.</p></details>
     </div>
   </div>
 </section>
@@ -523,11 +559,11 @@ footer a:hover{color:var(--lime)}
 <div class="final" id="contact">
   <div class="wrap">
     <div class="final-box reveal">
-      <h2>مش عارف تبدأ منين؟<br>قولي عايز توصل لفين.</h2>
-      <p>استشارة مجانية 15 دقيقة نفهم فيها البيزنس بتاعك ونحدد أسرع طريق لزيادة المبيعات.</p>
+      <h2>لست متأكداً من أين تبدأ؟<br>أخبرني بهدفك، ونضع الخطة معاً.</h2>
+      <p>استشارة مجانية لمدة 15 دقيقة نحلل فيها نشاطك التجاري ونحدد أسرع طريق لزيادة مبيعاتك.</p>
       <div class="hero-cta">
-        <a class="btn btn-dark" href="https://wa.me/201025168758?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9" target="_blank" rel="noopener">احجز الاستشارة على واتساب ←</a>
-        <a class="btn btn-ghost" href="mailto:amrnagiramadan@gmail.com">ابعت Email</a>
+        <a class="btn btn-dark" href="https://wa.me/201025168758?text=مرحباً عمرو، أرغب في حجز الاستشارة المجانية" target="_blank" rel="noopener">احجز استشارتك عبر واتساب ←</a>
+        <a class="btn btn-ghost" href="mailto:amrnagiramadan@gmail.com">راسلني عبر البريد</a>
       </div>
     </div>
   </div>
@@ -564,15 +600,15 @@ nav.querySelectorAll('a').forEach(function(a){a.onclick=function(){nav.classList
 ['t1','t2'].forEach(function(id){var t=document.getElementById(id);t.innerHTML+=t.innerHTML;});
 
 // typer
-var words=['حملات Meta Ads','مواقع WordPress','Landing Pages بتبيع','WhatsApp Marketing'],wi=0,ci=words[0].length,del=true,el=document.getElementById('typer');
+var words=['إدارة حملات Meta Ads','مواقع WordPress احترافية','صفحات هبوط عالية التحويل','استراتيجيات WhatsApp Marketing'],wi=0,ci=words[0].length,del=true,el=document.getElementById('typer');
 function type(){var w=words[wi];if(del){ci--;if(ci<=0){del=false;wi=(wi+1)%words.length;}}else{ci++;if(ci>=words[wi].length){del=true;el.textContent=words[wi];return setTimeout(type,1800);}}
 el.textContent=words[wi].slice(0,Math.max(ci,0))||'​';setTimeout(type,del?45:85);}
 if(!reduce)setTimeout(type,2600);
 
 // counters
-function count(elm){var to=+elm.dataset.to,pre=elm.dataset.pre||'',suf=elm.dataset.suf||'',t0=null,d=1600;
-function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/d,1),v=Math.round(to*(1-Math.pow(1-p,3)));elm.textContent=pre+v+suf;if(p<1)requestAnimationFrame(step);}
-if(reduce){elm.textContent=pre+to+suf}else requestAnimationFrame(step);}
+function count(elm){var dec=+(elm.dataset.dec||0),to=+elm.dataset.to,pre=elm.dataset.pre||'',suf=elm.dataset.suf||'',t0=null,d=1600;
+function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/d,1),v=(to*(1-Math.pow(1-p,3))).toFixed(dec);elm.textContent=pre+v+suf;if(p<1)requestAnimationFrame(step);}
+if(reduce){elm.textContent=pre+to.toFixed(dec)+suf}else requestAnimationFrame(step);}
 
 // reveal on scroll
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');
